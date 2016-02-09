@@ -15,6 +15,33 @@
   .gray .lightest {
     color: whitesmoke; }
 
+.black {
+  color: #000000; }
+
+.white {
+  color: #FFFFFF; }
+
+.bg-black {
+  background-color: #000000; }
+
+.bg-gray {
+  background-color: #D9D9D9; }
+
+.bg-gray-lightest {
+  background-color: #F5F5F5; }
+
+.bg-gray-light {
+  background-color: #E8E8E8; }
+
+.bg-gray-darkest {
+  background-color: #292929; }
+
+.bg-gray-dark {
+  background-color: #878787; }
+
+.bg-white {
+  background-color: #FFFFFF; }
+
 .red {
   color: rbga(#E31937, 1); }
   .red .darken {
@@ -125,7 +152,7 @@ a {
 
 /* Navbar brand color */
 .navbar-default .navbar-brand {
-  color: #24B166; }
+  color: #000000; }
 
 /* Form page header color */
 section > .page-header {
