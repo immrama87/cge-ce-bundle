@@ -5,9 +5,144 @@ $primary: #428BCA; //rgb(66, 139, 202)
 $secondary: #EDE4A8; //rgb(237, 228, 168)
 $tertiary: #24B166; //rgb(36, 177, 102)
 
-$gray: #B3C1C4; //rgb(179, 193, 196)
-$black: #312F38; //rgb(49, 47, 56)
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *   CGI Colors
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$red: 		#E31937; //rgb(227, 25, 55)
+$pumpkin:	#FF6A00; //rgb(255, 106, 0)
+$beet:		#991F3D; //rgb(153, 31, 61)
+$honey:		#F2A200; //rgb(242, 162, 0)
+$cloud:		#A5ACB0; //rgb(165, 172, 176)
+$ice:		#A1C4D0; //rgb(161, 196, 208)
+$dark-blue:	#006D9D; //rgb(0, 109, 157)
+$light-blue:#158FB8; //rgb(21, 143, 184)
 
+$gray: 			#D9D9D9; //rgb(217, 217, 217)
+$gray-light:	#E8E8E8; //rgb(232, 232, 232)
+$gray-lightest:	#F5F5F5; //rgb(245, 245, 245)
+$gray-dark:		#878787; //rgb(135, 135, 135)
+$gray-darkest:	#292929; //rgb(41, 41, 41)
+$black: 		#312F38; //rgb(49, 47, 56)
+
+.gray{
+	color: rgba($gray, 0%);
+	.darken{
+		color: 	rgba($gray-dark, 0%);
+	}
+	.darkest{
+		color:	rgba($gray-darkest, 0%);
+	}
+	.lighten{
+		color:	rgba($gray-light, 0%);
+	}
+	.lightest{
+		color:	rgba($gray-lightest, 0%);
+	}
+}
+
+.red{
+	color: rbga($red, 0%);
+	.darken{
+		color: darken($red, 20%);
+	}
+	.lighten{
+		color: lighten($red, 40%);
+	}
+	.complement{
+		color:	complement($red);
+	}
+}
+
+.pumpkin{
+	color: rgba($pumpkin, 0%);
+	.darken{
+		color:	darken($pumpkin, 20%);
+	}
+	.lighten{
+		color: 	lighten($pumpkin, 40%);
+	}
+	.complement{
+		color:	complement($pumpkin);
+	}
+}
+
+.beet{
+	color:	rgba($beet, 0%);
+	.darken{
+		color:	darken($beet, 20%);
+	}
+	.lighten{
+		color:	lighten($beet, 40%);
+	}
+	.complement{
+		color:	complement($beet);
+	}
+}
+
+.honey{
+	color: 	rgba($honey, 0%);
+	.darken{
+		color:	darken($honey, 20%);
+	}
+	.lighten{
+		color:	lighten($honey, 40%);
+	}
+	.complement{
+		color:	complement($honey);
+	}
+}
+
+.cloud{
+	color: 	rgba($cloud, 0%);
+	.darken{
+		color:	darken($cloud, 20%);
+	}
+	.lighten{
+		color:	lighten($cloud, 40%);
+	}
+	.complement{
+		color:	complement($cloud);
+	}
+}
+
+.ice{
+	color: 	rgba($ice, 0%);
+	.darken{
+		color:	darken($ice, 20%);
+	}
+	.lighten{
+		color:	lighten($ice, 40%);
+	}
+	.complement{
+		color:	complement($ice);
+	}
+}
+
+.dark-blue{
+	color: 	rgba($dark-blue, 0%);
+	.darken{
+		color:	darken($dark-blue, 20%);
+	}
+	.lighten{
+		color:	lighten($dark-blue, 40%);
+	}
+	.complement{
+		color:	complement($dark-blue);
+	}
+}
+
+.light-blue{
+	color: 	rgba($light-blue, 0%);
+	.darken{
+		color:	darken($light-blue, 20%);
+	}
+	.lighten{
+		color:	lighten($light-blue, 40%);
+	}
+	.complement{
+		color:	complement($light-blue);
+	}
+}
 
 .primary{
   color: rgba($primary, 0%);
@@ -54,7 +189,7 @@ $black: #312F38; //rgb(49, 47, 56)
 
 /* Default <a> tag*/
 a{
-  color: rgb($primary);
+  color: rgba($primary, 0%);
   &:hover{
     color: rgba($primary, .8);
   }
