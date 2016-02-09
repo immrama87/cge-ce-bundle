@@ -1,0 +1,32 @@
+/*
+	common.css
+*/
+
+/*~~~~~~~~~~~~~~~~~
+Page Layout
+~~~~~~~~~~~~~~~~~*/
+html,body,div.view-port{
+	height:100%;
+	position:relative;
+	overflow-y:hidden;
+}
+
+/*~~~~~~~~~~~~~~~~~
+Header
+~~~~~~~~~~~~~~~~~*/
+nav.navbar-default{
+	margin-bottom:0;
+	border-bottom:none;
+}
+
+/*~~~~~~~~~~~~~~~~~
+Sidebar Navigation
+~~~~~~~~~~~~~~~~~*/
+div.sidebar{
+	height:100%;
+}
+
+ul.sidebar-nav{
+	list-style-type:none;
+	padding:0;
+}
