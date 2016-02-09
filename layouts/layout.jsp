@@ -18,6 +18,7 @@
             <bundle:style src="${bundle.location}/libraries/notifie/jquery.notifie.css" />
             <bundle:style src="${bundle.location}/css/default.css "/>
 			<bundle:style src="${bundle.location}/css/colors.css "/>
+			<bundle:style src="${bundle.location}/css/common.css "/>
         </bundle:stylepack>
         <link href="${bundle.location}/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <bundle:scriptpack>
@@ -41,12 +42,12 @@
             <c:if test="${not empty identity}">
                 <c:import url="${bundle.path}/partials/header.jsp" charEncoding="UTF-8"/>
             </c:if>
-			<div class="col-md-2 hidden-xs">
+			<div class="col-md-1 hidden-xs bg-gray-darkest sidebar">
 				<c:import url="${bundle.path}/partials/sidebar.jsp" charEncoding="UTF-8"/>
 			</div>
-            <div class="col-xs-12 col-md-10">
-                <bundle:yield/>
-            </div>
+			<div class="col-xs-12 col-md-11">
+				<bundle:yield/>
+			</div>
             <c:import url="${bundle.path}/partials/footer.jsp" charEncoding="UTF-8"/>
         </div>
     </body>

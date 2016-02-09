@@ -93,7 +93,7 @@
                         </c:when>
                         <c:otherwise>
                             <div class="no-data">
-                                <h3>Customer is missing supporiting Alerts Data</h3>
+                                <h3>Customer is missing supporting Alerts Data</h3>
                                 <p>Please verify that the Helper Kapp has been installed and the Alerts form has been created</p>
                             </div>
                         </c:otherwise>

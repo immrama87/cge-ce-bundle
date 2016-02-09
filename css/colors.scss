@@ -22,7 +22,8 @@ $gray-light:	#E8E8E8; //rgb(232, 232, 232)
 $gray-lightest:	#F5F5F5; //rgb(245, 245, 245)
 $gray-dark:		#878787; //rgb(135, 135, 135)
 $gray-darkest:	#292929; //rgb(41, 41, 41)
-$black: 		#312F38; //rgb(49, 47, 56)
+$black: 		#000000; //rgb(0, 0, 0)
+$white:			#FFFFFF; //rgb(255, 255, 255)
 
 .gray{
 	color: rgba($gray, 1);
@@ -39,6 +40,21 @@ $black: 		#312F38; //rgb(49, 47, 56)
 		color:	rgba($gray-lightest, 1);
 	}
 }
+
+.black{
+	color: $black;
+}
+.white{
+	color: $white;
+}
+
+.bg-black{background-color: $black;}
+.bg-gray{background-color: $gray;}
+.bg-gray-lightest{background-color: $gray-lightest;}
+.bg-gray-light{background-color: $gray-light;}
+.bg-gray-darkest{background-color: $gray-darkest;}
+.bg-gray-dark{background-color: $gray-dark;}
+.bg-white{background-color: $white;}
 
 .red{
 	color: rbga($red, 1);
@@ -197,7 +213,7 @@ a{
 
 /* Navbar brand color */
 .navbar-default .navbar-brand {
-  color: $tertiary;
+  color: $black;
 }
 /* Form page header color */
 section > .page-header {

@@ -1,8 +1,8 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default bg-black">
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="navbar-header col-xs-1">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
             data-target="#navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -51,10 +51,9 @@
             <div class="navbar-form" role="search" style='margin-right:1em;'>
                 <form action="${bundle.kappLocation}" method="GET" role="form">
                     <div class="form-group">
-                            <input type="hidden" value="search" name="page">
-                            <input  type="text" class="states form-control predictiveText x" name="q" placeholder="Search Forms…" autocomplete="off" autofocus="autofocus">
-                        </div>
-                    </div>
+						<input type="hidden" value="search" name="page">
+						<input  type="text" class="states form-control predictiveText x" name="q" placeholder="Search Forms…" autocomplete="off" autofocus="autofocus">
+					</div>
                 </form>
             </div>
         </c:if>
