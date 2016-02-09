@@ -1,0 +1,182 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *   Default Colors
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *   CGI Colors
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.gray {
+  color: rgba(217, 217, 217, 0); }
+  .gray .darken {
+    color: rgba(135, 135, 135, 0); }
+  .gray .darkest {
+    color: rgba(41, 41, 41, 0); }
+  .gray .lighten {
+    color: rgba(232, 232, 232, 0); }
+  .gray .lightest {
+    color: rgba(245, 245, 245, 0); }
+
+.red {
+  color: rbga(#E31937, 0%); }
+  .red .darken {
+    color: #870f21; }
+  .red .lighten {
+    color: #faced5; }
+  .red .complement {
+    color: #19e3c5; }
+
+.pumpkin {
+  color: rgba(255, 106, 0, 0); }
+  .pumpkin .darken {
+    color: #994000; }
+  .pumpkin .lighten {
+    color: #ffe1cc; }
+  .pumpkin .complement {
+    color: #0095ff; }
+
+.beet {
+  color: rgba(153, 31, 61, 0); }
+  .beet .darken {
+    color: #440e1b; }
+  .beet .lighten {
+    color: #ea9aad; }
+  .beet .complement {
+    color: #1f997b; }
+
+.honey {
+  color: rgba(242, 162, 0, 0); }
+  .honey .darken {
+    color: #8c5e00; }
+  .honey .lighten {
+    color: #ffeabf; }
+  .honey .complement {
+    color: #0050f2; }
+
+.cloud {
+  color: rgba(165, 172, 176, 0); }
+  .cloud .darken {
+    color: #707a7f; }
+  .cloud .lighten {
+    color: white; }
+  .cloud .complement {
+    color: #b0a9a5; }
+
+.ice {
+  color: rgba(161, 196, 208, 0); }
+  .ice .darken {
+    color: #5d99ae; }
+  .ice .lighten {
+    color: white; }
+  .ice .complement {
+    color: #d0ada1; }
+
+.dark-blue {
+  color: rgba(0, 109, 157, 0); }
+  .dark-blue .darken {
+    color: #002637; }
+  .dark-blue .lighten {
+    color: #6ad1ff; }
+  .dark-blue .complement {
+    color: #9d3000; }
+
+.light-blue {
+  color: rgba(21, 143, 184, 0); }
+  .light-blue .darken {
+    color: #0b485c; }
+  .light-blue .lighten {
+    color: #a4e0f5; }
+  .light-blue .complement {
+    color: #b83e15; }
+
+.primary {
+  color: rgba(66, 139, 202, 0); }
+  .primary .darken {
+    color: #245682; }
+  .primary .lighten {
+    color: #e1edf7; }
+  .primary .complement {
+    color: #ca8142; }
+
+.secondary {
+  color: #EDE4A8; }
+  .secondary .darken {
+    color: #dcca53; }
+  .secondary .lighten {
+    color: white; }
+  .secondary .complement {
+    color: #a8b1ed; }
+
+.tertiary {
+  color: #24B166; }
+  .tertiary .darken {
+    color: #135c35; }
+  .tertiary .lighten {
+    color: #b2efcf; }
+  .tertiary .complement {
+    color: #b1246f; }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *   Colored Elements
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Default <a> tag*/
+a {
+  color: rgba(66, 139, 202, 0); }
+  a:hover {
+    color: rgba(66, 139, 202, 0.8); }
+
+/* Navbar brand color */
+.navbar-default .navbar-brand {
+  color: #24B166; }
+
+/* Form page header color */
+section > .page-header {
+  background-color: #EDE4A8; }
+
+/* Menu Nav border color */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  border-bottom: 0.4rem solid rgba(66, 139, 202, 0.5); }
+
+.nav-pills > li > a:hover {
+  color: #428BCA;
+  border-bottom: 0.4rem solid #428BCA; }
+
+/* Default Button */
+form button,
+form .btn {
+  background-color: #24B166; }
+
+/* Default Button:hover; */
+form button:hover,
+form .btn:hover {
+  background-color: rgba(36, 177, 102, 0.8); }
+
+/* Custom Button styles */
+form button[data-button-type='custom'] {
+  border-color: #24B166;
+  color: #24B166; }
+
+/* Previous Page Custom :hover*/
+form button[data-button-type='previous-page']:hover,
+form button[data-button-type='custom']:hover {
+  background-color: rgba(36, 177, 102, 0.8); }
+
+/* Timeline Dot*/
+.timeline > ul > li:before {
+  color: #EDE4A8; }
+
+/* Card Icon Color */
+.card .fa {
+  color: #428BCA; }
+
+/* Card top border */
+.card .card-content {
+  border-top-color: #428BCA; }
+
+/* Card link color */
+.card .action a {
+  color: #428BCA; }
+  .card .action a:hover {
+    color: rgba(66, 139, 202, 0.5); }
+
+/*# sourceMappingURL=colors.css.map */
