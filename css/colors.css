@@ -5,18 +5,18 @@
  *   CGI Colors
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .gray {
-  color: rgba(217, 217, 217, 0); }
+  color: #d9d9d9; }
   .gray .darken {
-    color: rgba(135, 135, 135, 0); }
+    color: #878787; }
   .gray .darkest {
-    color: rgba(41, 41, 41, 0); }
+    color: #292929; }
   .gray .lighten {
-    color: rgba(232, 232, 232, 0); }
+    color: #e8e8e8; }
   .gray .lightest {
-    color: rgba(245, 245, 245, 0); }
+    color: whitesmoke; }
 
 .red {
-  color: rbga(#E31937, 0%); }
+  color: rbga(#E31937, 1); }
   .red .darken {
     color: #870f21; }
   .red .lighten {
@@ -25,7 +25,7 @@
     color: #19e3c5; }
 
 .pumpkin {
-  color: rgba(255, 106, 0, 0); }
+  color: #ff6a00; }
   .pumpkin .darken {
     color: #994000; }
   .pumpkin .lighten {
@@ -34,7 +34,7 @@
     color: #0095ff; }
 
 .beet {
-  color: rgba(153, 31, 61, 0); }
+  color: #991f3d; }
   .beet .darken {
     color: #440e1b; }
   .beet .lighten {
@@ -43,7 +43,7 @@
     color: #1f997b; }
 
 .honey {
-  color: rgba(242, 162, 0, 0); }
+  color: #f2a200; }
   .honey .darken {
     color: #8c5e00; }
   .honey .lighten {
@@ -52,7 +52,7 @@
     color: #0050f2; }
 
 .cloud {
-  color: rgba(165, 172, 176, 0); }
+  color: #a5acb0; }
   .cloud .darken {
     color: #707a7f; }
   .cloud .lighten {
@@ -61,7 +61,7 @@
     color: #b0a9a5; }
 
 .ice {
-  color: rgba(161, 196, 208, 0); }
+  color: #a1c4d0; }
   .ice .darken {
     color: #5d99ae; }
   .ice .lighten {
@@ -70,7 +70,7 @@
     color: #d0ada1; }
 
 .dark-blue {
-  color: rgba(0, 109, 157, 0); }
+  color: #006d9d; }
   .dark-blue .darken {
     color: #002637; }
   .dark-blue .lighten {
@@ -79,7 +79,7 @@
     color: #9d3000; }
 
 .light-blue {
-  color: rgba(21, 143, 184, 0); }
+  color: #158fb8; }
   .light-blue .darken {
     color: #0b485c; }
   .light-blue .lighten {
@@ -88,7 +88,7 @@
     color: #b83e15; }
 
 .primary {
-  color: rgba(66, 139, 202, 0); }
+  color: #428bca; }
   .primary .darken {
     color: #245682; }
   .primary .lighten {

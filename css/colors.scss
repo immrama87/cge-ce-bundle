@@ -25,23 +25,23 @@ $gray-darkest:	#292929; //rgb(41, 41, 41)
 $black: 		#312F38; //rgb(49, 47, 56)
 
 .gray{
-	color: rgba($gray, 0%);
+	color: rgba($gray, 1);
 	.darken{
-		color: 	rgba($gray-dark, 0%);
+		color: 	rgba($gray-dark, 1);
 	}
 	.darkest{
-		color:	rgba($gray-darkest, 0%);
+		color:	rgba($gray-darkest, 1);
 	}
 	.lighten{
-		color:	rgba($gray-light, 0%);
+		color:	rgba($gray-light, 1);
 	}
 	.lightest{
-		color:	rgba($gray-lightest, 0%);
+		color:	rgba($gray-lightest, 1);
 	}
 }
 
 .red{
-	color: rbga($red, 0%);
+	color: rbga($red, 1);
 	.darken{
 		color: darken($red, 20%);
 	}
@@ -54,7 +54,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 }
 
 .pumpkin{
-	color: rgba($pumpkin, 0%);
+	color: rgba($pumpkin, 1);
 	.darken{
 		color:	darken($pumpkin, 20%);
 	}
@@ -67,7 +67,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 }
 
 .beet{
-	color:	rgba($beet, 0%);
+	color:	rgba($beet, 1);
 	.darken{
 		color:	darken($beet, 20%);
 	}
@@ -80,7 +80,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 }
 
 .honey{
-	color: 	rgba($honey, 0%);
+	color: 	rgba($honey, 1);
 	.darken{
 		color:	darken($honey, 20%);
 	}
@@ -93,7 +93,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 }
 
 .cloud{
-	color: 	rgba($cloud, 0%);
+	color: 	rgba($cloud, 1);
 	.darken{
 		color:	darken($cloud, 20%);
 	}
@@ -106,7 +106,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 }
 
 .ice{
-	color: 	rgba($ice, 0%);
+	color: 	rgba($ice, 1);
 	.darken{
 		color:	darken($ice, 20%);
 	}
@@ -119,7 +119,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 }
 
 .dark-blue{
-	color: 	rgba($dark-blue, 0%);
+	color: 	rgba($dark-blue, 1);
 	.darken{
 		color:	darken($dark-blue, 20%);
 	}
@@ -132,7 +132,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 }
 
 .light-blue{
-	color: 	rgba($light-blue, 0%);
+	color: 	rgba($light-blue, 1);
 	.darken{
 		color:	darken($light-blue, 20%);
 	}
@@ -145,7 +145,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 }
 
 .primary{
-  color: rgba($primary, 0%);
+  color: rgba($primary, 1);
   .darken{
     color: darken($primary, 20%);
   }
@@ -189,7 +189,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 
 /* Default <a> tag*/
 a{
-  color: rgba($primary, 100%);
+  color: rgba($primary, 1);
   &:hover{
     color: rgba($primary, .8);
   }
