@@ -16,7 +16,8 @@ Header
 ~~~~~~~~~~~~~~~~~*/
 nav.navbar-default{
 	margin-bottom:0;
-	border-bottom:none;
+	border:none;
+	border-radius:0;
 }
 
 /*~~~~~~~~~~~~~~~~~
@@ -29,4 +30,8 @@ div.sidebar{
 ul.sidebar-nav{
 	list-style-type:none;
 	padding:0;
+}
+
+ul.sidebar-nav > li{
+	
 }
