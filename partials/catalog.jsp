@@ -1,7 +1,12 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
+
+<!-- Build a list of variables to loop over later on. List includes alerts, submissions and approvals -->
+<c:set scope="request" var="approvalsList" value="${Submissions.searchByKapp(kapp, SubmissionHelper.requestsQueryOptions())}"/>
+<c:set scope="request" var="submissionsList" value="${Submissions.searchByKapp(kapp, SubmissionHelper.approvalsQueryOptions())}"/>
+
 <bundle:variable name="head">
-    <title>Kinetic Data ${text.escape(kapp.name)}</title>
+    <title>${text.escape(kapp.name)} - Home</title>
 </bundle:variable>
 <section class="catalog">
     <section class="welcome">
@@ -39,7 +44,7 @@
         	</c:forEach>
         </div>
     </section>
-    <c:set scope="request" var="alertsList" value="${Submissions.searchByForm(space.getKapp('helper').getForm('alerts'))}"/>
+    <!-- Begin Widgets Section -->
     <section class="widgets background-gray hidden-sm hidden-xs">
         <div class="row color-black announcements">
             <div class="title col-md-2 color-gray-darkest">
@@ -48,41 +53,51 @@
             </div>
             <div class="col-md-10 messages background-gray-lightest">
                 <div class="row" container-max="3">
-                    <c:forEach items="${alertsList}" var="alert" varStatus="loop">
-                        <c:set scope="request" var="hideshow" value=""/>
-                        <c:if test="${loop.index gt 2}">
-                            <c:set scope="request" var="hideshow" value="hide"/>
-                        </c:if>
+                    <!-- Test to make sure the helper Kapp and alerts form exists in the Space -->
+                    <c:choose>
+                        <c:when test="${not empty space.getKapp('helper') && not empty space.getKapp('helper').getForm('alerts')}">
+                            <c:set scope="request" var="alertsList" value="${Submissions.searchByForm(space.getKapp('helper').getForm('alerts'))}"/>
+                            <c:forEach items="${alertsList}" var="alert" varStatus="loop">
+                                <c:set scope="request" var="hideshow" value=""/>
+                                <c:if test="${loop.index gt 2}">
+                                    <c:set scope="request" var="hideshow" value="hide"/>
+                                </c:if>
+                                <div class="col-md-4 message ${hideshow}">
+                                    <div class="date">  
+                                        <div class="day">${alert.createdAt}</div>
+                                        <div class="mt">${alert.createdAt}</div>
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="subject">${alert.getValue('Subject')}</h3>
+                                        <p class="body">${alert.getValue('Message')}</p>
+                                    </div>
+                                </div>
+                            </c:forEach>
 
-
-                        <div class="col-md-4 message ${hideshow}">
-                            <div class="date">  
-                                <div class="day">${alert.createdAt}</div>
-                                <div class="mt">${alert.createdAt}</div>
+                            <c:if test="${fn:length(alerts) gt 3}">
+                                <div class="shift left inactive" content-target="div.message">
+                                    <span>
+                                        <i class="background fa fa-circle"></i>
+                                        <i class="icon fa fa-chevron-circle-left"></i>
+                                    </span>
+                                </div>
+                                <div class="shift right" content-target="div.message">
+                                    <i class="background fa fa-circle"></i>
+                                    <i class="icon fa fa-chevron-circle-right"></i>
+                                </div>
+                            </c:if>
+                            <c:forEach items="${alertsList}" var="alert" end="2">
+                                <div class="col-md-4 message">
+                                </div>
+                            </c:forEach>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="no-data">
+                                <h3>Customer is missing supporiting Alerts Data</h3>
+                                <p>Please verify that the Helper Kapp has been installed and the Alerts form has been created</p>
                             </div>
-                            <div class="content">
-                                <h3 class="subject">${alert.getValue('Subject')}</h3>
-                                <p class="body">${alert.getValue('Message')}</p>
-                            </div>
-                        </div>
-                    </c:forEach>
-
-                    <c:if test="${fn:length(alerts) gt 3}">
-                        <div class="shift left inactive" content-target="div.message">
-                            <span>
-                                <i class="background fa fa-circle"></i>
-                                <i class="icon fa fa-chevron-circle-left"></i>
-                            </span>
-                        </div>
-                        <div class="shift right" content-target="div.message">
-                            <i class="background fa fa-circle"></i>
-                            <i class="icon fa fa-chevron-circle-right"></i>
-                        </div>
-                    </c:if>
-                    <c:forEach items="${alertsList}" var="alert" end="2">
-                        <div class="col-md-4 message">
-                        </div>
-                    </c:forEach>
+                        </c:otherwise>
+                    </c:choose>
                 </div>
             </div>
         </div>
@@ -121,6 +136,7 @@
             </div>
         </div>
     </section>
+    <!-- End Widgets Section -->
 
 
 
