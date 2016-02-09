@@ -13,7 +13,7 @@
             <c:if test="${kapp != null}">
                 <a class="navbar-brand" href="${bundle.kappLocation}">
                     <c:if test="${not empty kapp.getAttribute('logo-url')}">
-                        <img src="${bundle.path}/${kapp.getAttribute('logo-url').value}" alt="logo">
+                        <img src="${bundle.location}/images/${kapp.getAttribute('logo-url').value}" alt="logo">
                     </c:if>
                     <c:if test="${empty kapp.getAttribute('logo-url')}">
                         <i class="fa fa-home"></i> ${text.escape(kapp.name)}
