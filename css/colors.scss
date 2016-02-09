@@ -189,7 +189,7 @@ $black: 		#312F38; //rgb(49, 47, 56)
 
 /* Default <a> tag*/
 a{
-  color: rgba($primary, 0%);
+  color: rgba($primary, 100%);
   &:hover{
     color: rgba($primary, .8);
   }
