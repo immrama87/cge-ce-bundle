@@ -38,6 +38,30 @@ $(function(){
   });
 });
 
+
+$(function(){
+  // Ajax call to get HTML that builds the submissions table via a callback
+  $.ajax({
+      method: 'get',
+      url: '?partial=submissions.json',
+      data: {"submissionType":"Submissions"},
+      success: function(data, textStatus, jqXHR){
+          // Create DataTable for Object
+          var submissionsTable = $('#submissionsTable').DataTable(data);
+
+          // On click Function for Row Buttons
+          $('#submissionsTable tbody').on( 'click', 'button', function () {
+
+          });
+          
+      },
+      dataType: "json",
+      error: function(jqXHR, textStatus, errorThrown){
+          $('#submissionsTable').html('<b>Error fetching Submissions for the </b>');
+      }
+  });
+});
+
 /**
  * Applies the Jquery DataTables plugin to a rendered HTML table to provide
  * column sorting and Moment.js functionality to date/time values.

@@ -115,7 +115,9 @@
                             </a>
                         </div>
                     </header>
-                    <div class="content background-gray-lightest"></div>
+                    <div class="content background-gray-lightest">
+                        <table id="assignedTasksTable"></table>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 reports widget" widget-target="service-management" data-target="div.content" filter-target="div.filter">
@@ -131,7 +133,9 @@
                             </a>
                         </div>
                     </header>
-                    <div class="content background-gray-lightest"></div>
+                    <div class="content background-gray-lightest">
+                        <table id="submissionsTable"></table>
+                    </div>
                 </div>
             </div>
         </div>
