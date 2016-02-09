@@ -11,7 +11,7 @@
 <section class="catalog">
     <section class="welcome">
         <div class="h1 center color-white lighter">
-            Welcome ${text.escape(identity.username)}
+            Welcome ${text.escape(identity.user.displayName)}
         </div>
         <div class="h2 center color-dark-blue normal">
             What would you like to do?
