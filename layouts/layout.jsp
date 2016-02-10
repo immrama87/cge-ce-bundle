@@ -27,6 +27,8 @@
             <bundle:script src="${bundle.location}/libraries/notifie/jquery.notifie.js" />
             <bundle:script src="${bundle.location}/libraries/jquery-datatables/jquery.dataTables.js" />
             <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.min.js" />
+            <bundle:script src="${bundle.location}/libraries/moment/moment.min.js" />
+            <bundle:script src="${bundle.location}/libraries/moment/moment-timezone.min.js" />
             <bundle:script src="${bundle.location}/js/catalog.js" />
             <bundle:script src="${bundle.location}/js/review.js" />
 			<bundle:script src="${bundle.location}/js/jstz.min.js" />
