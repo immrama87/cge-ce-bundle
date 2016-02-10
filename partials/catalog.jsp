@@ -5,6 +5,10 @@
 <c:set scope="request" var="approvalsList" value="${Submissions.searchByKapp(kapp, SubmissionHelper.requestsQueryOptions())}"/>
 <c:set scope="request" var="submissionsList" value="${Submissions.searchByKapp(kapp, SubmissionHelper.approvalsQueryOptions())}"/>
 
+<bundle:stylepack>
+	<bundle:style src="${bundle.location}/css/catalog.css" />
+</bundle:stylepack>
+
 <bundle:variable name="head">
     <title>${text.escape(kapp.name)} - Home</title>
 </bundle:variable>
