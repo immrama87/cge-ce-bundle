@@ -31,6 +31,17 @@
             <bundle:script src="${bundle.location}/js/review.js" />
 			<bundle:script src="${bundle.location}/js/jstz.min.js" />
         </bundle:scriptpack>
+        <c:if test="${empty sessionScope.timezone}">
+            <script>
+            $(document).ready(function() {
+                $.ajax({
+                    type : "get",
+                    url : "?partial=setlocale",
+                    data: {"timezone":moment.tz.guess()}
+                });
+            });
+            </script>
+        </c:if>
         <bundle:yield name="head"/>
         <style>
             <c:if test="${not empty kapp.getAttribute('logo-height-px')}">
