@@ -12,7 +12,7 @@
 			<%-- If the category is not hidden, and it contains at least 1 form --%>
 			<c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true'}">
 				<li class="category">
-					<a class="white color-hover-ice" href="javascript:void(0);" aria-label="${text.escape(category.name)}">
+					<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}" aria-label="${text.escape(category.name)}">
 						<i class="fa ${category.getAttribute('fa-logo').value}"></i>
 						<span>${text.escape(category.name)}</span>
 					</a>

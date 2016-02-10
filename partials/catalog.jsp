@@ -33,7 +33,7 @@
         		<c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && fn:toLowerCase(category.getAttribute('Visible On Home Page').value) eq 'true'}">
         			<div class="col-md-3">
         				<div class="panel">
-        					<a class="color-white color-hover-ice" href="javascript:void(0)" aria-label="${text.escape(category.name)}">
+        					<a class="color-white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}" aria-label="${text.escape(category.name)}">
         						<div class="icon" style="background: url(&quot;${bundle.location}/images/${category.getAttribute('Home Page Image').value}&quot;);"></div>
         						<div class="iconLabel">${text.escape(category.name)}</div>
         						<div class="drop-shadow"></div>
