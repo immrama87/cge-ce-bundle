@@ -24,11 +24,47 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <li class="hidden-xs dropdown" style="display:none">
+                    <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="hidden-lg hidden-md">Kapps <span class="fa fa-caret-down fa-fw"></span></span><span class="hidden-sm hidden-xs fa fa-th fa-fw"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="drop2">
+                        <li class="category">
+                            <a class="white color-hover-ice" href="javascript:void(0);" aria-label="My Dashboard">
+                                <i class="fa fa-th-large"></i>
+                                <span>My Dashboard</span>
+                            </a>
+                        </li>
+                        <c:forEach items="${kapp.categories}" var="category">
+                            <%-- If the category is not hidden, and it contains at least 1 form --%>
+                            <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true'}">
+                                <li class="category">
+                                    <a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}" aria-label="${text.escape(category.name)}">
+                                        <i class="fa ${category.getAttribute('fa-logo').value}"></i>
+                                        <span>${text.escape(category.name)}</span>
+                                    </a>
+                                </li>
+                            </c:if>
+                        </c:forEach>
+                    </ul>
+                </li>
+                <li class="messages color-white color-hover-ice">
+                    <a href="${bundle.kappLocation}" role="button">
+                        <span class="fa fa-home"></span>
+                    </a>
+                </li>
+                <li class="messages color-white color-hover-ice">
+                    <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="fa fa-bell"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="drop1">
+                        <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Alerts go here!</a></li>
+                        <li class="divider"></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-user fa-fw"></i> 
-                        ${text.escape(identity.username)} 
-                        <span class="fa fa-caret-down fa-fw"></span>
+                        Hello, 
+                        <span class="user-fullname">${text.escape(identity.user.displayName)} </span>
+                        <span class="fa fa-chevron-circle-down"></span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="drop1">
                         <li><a href="${bundle.spaceLocation}/${kapp.slug}?page=profile"><i class="fa fa-pencil fa-fw"></i> Edit Profile</a></li>
@@ -36,14 +72,6 @@
                         <li><a href="${bundle.spaceLocation}/app/"><i class="fa fa-dashboard fa-fw"></i> Management Console</a></li>
                         <li class="divider"></li>
                         <li><a href="${bundle.spaceLocation}/app/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
-                    </ul>
-                </li>
-                <li class="hidden-xs dropdown">
-                    <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="hidden-lg hidden-md">Kapps <span class="fa fa-caret-down fa-fw"></span></span><span class="hidden-sm hidden-xs fa fa-th fa-fw"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="drop2">
-                        <c:forEach items="${space.kapps}" var="kapp" begin="0" end="8">
-                            <li><a href="/kinetic/${space.slug}/${kapp.slug}/">${kapp.name}</a></li>
-                        </c:forEach>
                     </ul>
                 </li>
             </ul>
