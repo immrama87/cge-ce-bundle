@@ -1,0 +1,16 @@
+/*catalog.css*/
+section.quick-links div.icons div.icon{
+	width:35%;
+	position:relative;
+	margin:0 auto;
+}
+
+section.quick-links div.icons div.icon:before{
+	content:"";
+	display:block;
+	padding-top:100%;
+}
+
+section.quick-links div.icons:first-child {
+    margin-bottom: 20px;
+}
