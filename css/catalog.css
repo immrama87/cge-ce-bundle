@@ -1,4 +1,8 @@
 /*catalog.css*/
+section.quick-links div.icons div.panel{
+	background:transparent;
+}
+
 section.quick-links div.icons div.icon{
 	width:35%;
 	position:relative;
@@ -13,4 +17,46 @@ section.quick-links div.icons div.icon:before{
 
 section.quick-links div.icons:first-child {
     margin-bottom: 20px;
+}
+
+section.catalog div.panel div.iconLabel {
+    font-size: 1em;
+    text-align: center;
+	margin-top: 4em;
+    display: block;
+    padding: 0 0 0 10px;
+    line-height: inherit;
+    font-weight: normal;
+}
+
+section.catalog{
+	width:100%;
+	height:100%;
+	overflow-y:auto;
+}
+
+section.catalog section.welcome{
+	height:15%;
+	background:black;
+	min-height:9em;
+	text-align:center;
+	font-size:0.75em;
+}
+
+section.catalog section.welcome div.h1{
+	margin-top:0;
+	padding-top:1em;
+}
+
+section.catalog section.welcome div.h3{
+	text-transform:none;
+}
+
+section.catalog section.quick-links{
+	height:30%;
+	min-height:21em;
+}
+
+section.widgets{
+	height:55%;
 }

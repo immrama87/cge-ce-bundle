@@ -29,6 +29,7 @@
             <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.min.js" />
             <bundle:script src="${bundle.location}/js/catalog.js" />
             <bundle:script src="${bundle.location}/js/review.js" />
+			<bundle:script src="${bundle.location}/js/jstz.min.js" />
         </bundle:scriptpack>
         <bundle:yield name="head"/>
         <style>
@@ -45,7 +46,7 @@
 			<div class="col-md-1 hidden-xs bg-gray-darkest sidebar">
 				<c:import url="${bundle.path}/partials/sidebar.jsp" charEncoding="UTF-8"/>
 			</div>
-			<div class="col-xs-12 col-md-11">
+			<div class="col-xs-12 col-md-11 main-content">
 				<bundle:yield/>
 			</div>
             <c:import url="${bundle.path}/partials/footer.jsp" charEncoding="UTF-8"/>

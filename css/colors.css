@@ -154,6 +154,12 @@ a {
 .navbar-default .navbar-brand {
   color: #000000; }
 
+nav.navbar-default ul.navbar-nav > li > a {
+  color: #FFFFFF; }
+
+nav.navbar-default ul.navbar-nav > li > a:hover {
+  color: #A1C4D0; }
+
 /* Form page header color */
 section > .page-header {
   background-color: #EDE4A8; }

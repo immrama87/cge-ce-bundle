@@ -11,6 +11,11 @@ html,body,div.view-port{
 	overflow-y:hidden;
 }
 
+div.main-content{
+	height:100%;
+	padding:0;
+}
+
 /*~~~~~~~~~~~~~~~~~
 Header
 ~~~~~~~~~~~~~~~~~*/
@@ -39,5 +44,58 @@ ul.sidebar-nav > li{
 ul.sidebar-nav > li > a > span{
 	display:inline-block;
 	width:85%;
+	vertical-align:middle;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~
+Messages Page Navigation
+~~~~~~~~~~~~~~~~~~~~~~~*/
+ul.messages{
+	padding:0.5em 0;
+}
+
+div.messages{
+	padding:0 0.5em;
+}
+
+.messages div.shift{
+	font-size:2em;
+	position:absolute;
+	width:1em;
+	height:1em;
+}
+
+.messages div.shift i{
+	display:inline-block;
+	color:white;
+	background:black;
+	padding:0.5em;
+	border-radius:100%;
+	vertical-align:middle;
+}
+
+.messages div.shift.up{
+	top:-0.5em;
+}
+
+.messages div.shift.down{
+	bottom:0.5em;
+}
+
+.messages div.shift.up, .messages div.shift.down{
+	width:100%;
+	text-align:center;
+}
+
+.messages div.shift.left{
+	left:-0.5em;
+}
+
+.messages div.shift.right{
+	right:0.5em;
+}
+
+.messages div.shift.left, .messages div.shift.right{
+	height:100%;
 	vertical-align:middle;
 }

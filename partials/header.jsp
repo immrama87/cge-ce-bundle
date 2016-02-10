@@ -46,21 +46,18 @@
                         </c:forEach>
                     </ul>
                 </li>
-                <li class="messages color-white color-hover-ice">
+                <li class="white color-hover-ice">
                     <a href="${bundle.kappLocation}" role="button">
                         <span class="fa fa-home"></span>
                     </a>
                 </li>
-                <li class="messages color-white color-hover-ice">
+                <li class="messages white color-hover-ice">
                     <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <span class="fa fa-bell"></span>
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="drop1">
-                        <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Alerts go here!</a></li>
-                        <li class="divider"></li>
-                    </ul>
+                    <c:import url="${bundle.path}/partials/alerts.jsp?orient=vertical"/>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown white">
                     <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         Hello, 
                         <span class="user-fullname">${text.escape(identity.user.displayName)} </span>
