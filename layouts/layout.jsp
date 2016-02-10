@@ -16,6 +16,7 @@
         <bundle:stylepack>
             <bundle:style src="${bundle.location}/libraries/bootstrap/bootstrap.min.css" />
             <bundle:style src="${bundle.location}/libraries/notifie/jquery.notifie.css" />
+			<bundle:style src="${bundle.location}/libraries/jquery-datatables/jquery.dataTables.min.css" />
             <bundle:style src="${bundle.location}/css/default.css "/>
 			<bundle:style src="${bundle.location}/css/colors.css "/>
 			<bundle:style src="${bundle.location}/css/common.css "/>

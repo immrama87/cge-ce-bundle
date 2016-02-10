@@ -20,8 +20,11 @@
 						</c:if>
 						<li class="message ${hideshow}">
 							<div class="date">
-								<div class="day">${time.format(alert.createdAt)}</div>
-								<div class="mt">${alert.createdAt}</div>
+								<div class="day"><fmt:formatDate type="both" pattern="d" timeZone="${timezone}" value="${alert.createdAt}" /></div>
+								<div class="mt">
+									<fmt:formatDate type="both" pattern="MMM yyyy" timeZone="${timezone}" value="${alert.createdAt}" /><br />
+									<fmt:formatDate type="both" pattern="hh:mm a" timeZone="${timezone}" value="${alert.createdAt}" />
+								</div>
 							</div>
 							<div class="content">
 								<h3 class="subject">${text.escape(alert.getValue('Subject'))}</h3>
@@ -68,8 +71,11 @@
 								</c:if>
 								<div class="col-md-4 message ${hideshow}">
 									<div class="date" time-value="${time.format(alert.createdAt)}">
-										<div class="day"></div>
-										<div class="mt"></div>
+										<div class="day"><fmt:formatDate type="both" pattern="d" timeZone="${timezone}" value="${alert.createdAt}" /></div>
+										<div class="mt">
+											<fmt:formatDate type="both" pattern="MMM yyyy" timeZone="${timezone}" value="${alert.createdAt}" /><br />
+											<fmt:formatDate type="both" pattern="hh:mm a" timeZone="${timezone}" value="${alert.createdAt}" />
+										</div>
 									</div>
 									<div class="content">
 										<h3 class="subject">${text.escape(alert.getValue('Subject'))}</h3>

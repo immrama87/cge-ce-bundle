@@ -99,3 +99,10 @@ div.messages{
 	height:100%;
 	vertical-align:middle;
 }
+
+/*~~~~~~~~~~~~~~~~~
+Tables
+~~~~~~~~~~~~~~~~~*/
+table.hover tr{
+	cursor:pointer;
+}

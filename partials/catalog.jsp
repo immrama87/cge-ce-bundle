@@ -26,7 +26,7 @@
         	<div class="col-md-3">
         		<div class="panel">
         			<a class="white color-hover-ice" href="javascript:void(0)" aria-label="Go To My Dashboard">
-        				<div class="icon" style="background: url(&quot;${bundle.location}/images/dashboard.png&quot;);"></div>
+        				<div class="icon" style="background: url(&quot;${bundle.location}/images/dashboard.png&quot;);background-size:contain;"></div>
         				<div class="iconLabel">Go To My Dashboard</div>
         				<div class="drop-shadow"></div>
         			</a>
@@ -38,7 +38,7 @@
         			<div class="col-md-3">
         				<div class="panel">
         					<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}" aria-label="${text.escape(category.name)}">
-        						<div class="icon" style="background: url(&quot;${bundle.location}/images/${category.getAttribute('Home Page Image').value}&quot;);"></div>
+        						<div class="icon" style="background: url(&quot;${bundle.location}/images/${category.getAttribute('Home Page Image').value}&quot;);background-size:contain;"></div>
         						<div class="iconLabel">${text.escape(category.name)}</div>
         						<div class="drop-shadow"></div>
         					</a>
@@ -66,7 +66,7 @@
                         </div>
                     </header>
                     <div class="content background-gray-lightest">
-                        <table id="assignedTasksTable"></table>
+                        <table id="assignedTasksTable" class="hover"></table>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                         </div>
                     </header>
                     <div class="content background-gray-lightest">
-                        <table id="submissionsTable"></table>
+                        <table id="submissionsTable" class="hover"></table>
                     </div>
                 </div>
             </div>

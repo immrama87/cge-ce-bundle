@@ -1,9 +1,44 @@
+@mixin colorRules ($name, $color){
+	.#{$name}{
+		color:	rgba($color, 1);
+		.darken{
+			color: 	darken($color, 20%);
+		}
+		.lighten{
+			color:	lighten($color, 40%);
+		}
+		.complement{
+			color:	complement($color);
+		}
+	}
+	
+	.bg-#{$name}{
+		background-color:$color;
+	}
+	
+	.color-hover-#{$name}:hover{
+		color:$color;
+	}
+	
+	.color-border-#{$name}{
+		border-color:$color;
+	}
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *   Default Colors
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 $primary: #428BCA; //rgb(66, 139, 202)
 $secondary: #EDE4A8; //rgb(237, 228, 168)
 $tertiary: #24B166; //rgb(36, 177, 102)
+$black: 		#000000; //rgb(0, 0, 0)
+$white:			#FFFFFF; //rgb(255, 255, 255)
+
+@include colorRules(primary, $primary);
+@include colorRules(secondary, $secondary);
+@include colorRules(tertiary, $tertiary);
+@include colorRules(black, $black);
+@include colorRules(white, $white);
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *   CGI Colors
@@ -22,182 +57,21 @@ $gray-light:	#E8E8E8; //rgb(232, 232, 232)
 $gray-lightest:	#F5F5F5; //rgb(245, 245, 245)
 $gray-dark:		#878787; //rgb(135, 135, 135)
 $gray-darkest:	#292929; //rgb(41, 41, 41)
-$black: 		#000000; //rgb(0, 0, 0)
-$white:			#FFFFFF; //rgb(255, 255, 255)
 
-.gray{
-	color: rgba($gray, 1);
-	.darken{
-		color: 	rgba($gray-dark, 1);
-	}
-	.darkest{
-		color:	rgba($gray-darkest, 1);
-	}
-	.lighten{
-		color:	rgba($gray-light, 1);
-	}
-	.lightest{
-		color:	rgba($gray-lightest, 1);
-	}
-}
+@include colorRules(red, $red);
+@include colorRules(pumpkin, $pumpkin);
+@include colorRules(beet, $beet);
+@include colorRules(honey, $honey);
+@include colorRules(cloud, $cloud);
+@include colorRules(ice, $ice);
+@include colorRules(dark-blue, $dark-blue);
+@include colorRules(light-blue, $light-blue);
+@include colorRules(gray, $gray);
+@include colorRules(gray-light, $gray-light);
+@include colorRules(gray-lightest, $gray-lightest);
+@include colorRules(gray-dark, $gray-dark);
+@include colorRules(gray-darkest, $gray-darkest);
 
-.black{
-	color: $black;
-}
-.white{
-	color: $white;
-}
-
-.bg-black{background-color: $black;}
-.bg-gray{background-color: $gray;}
-.bg-gray-lightest{background-color: $gray-lightest;}
-.bg-gray-light{background-color: $gray-light;}
-.bg-gray-darkest{background-color: $gray-darkest;}
-.bg-gray-dark{background-color: $gray-dark;}
-.bg-white{background-color: $white;}
-
-.red{
-	color: rbga($red, 1);
-	.darken{
-		color: darken($red, 20%);
-	}
-	.lighten{
-		color: lighten($red, 40%);
-	}
-	.complement{
-		color:	complement($red);
-	}
-}
-
-.pumpkin{
-	color: rgba($pumpkin, 1);
-	.darken{
-		color:	darken($pumpkin, 20%);
-	}
-	.lighten{
-		color: 	lighten($pumpkin, 40%);
-	}
-	.complement{
-		color:	complement($pumpkin);
-	}
-}
-
-.beet{
-	color:	rgba($beet, 1);
-	.darken{
-		color:	darken($beet, 20%);
-	}
-	.lighten{
-		color:	lighten($beet, 40%);
-	}
-	.complement{
-		color:	complement($beet);
-	}
-}
-
-.honey{
-	color: 	rgba($honey, 1);
-	.darken{
-		color:	darken($honey, 20%);
-	}
-	.lighten{
-		color:	lighten($honey, 40%);
-	}
-	.complement{
-		color:	complement($honey);
-	}
-}
-
-.cloud{
-	color: 	rgba($cloud, 1);
-	.darken{
-		color:	darken($cloud, 20%);
-	}
-	.lighten{
-		color:	lighten($cloud, 40%);
-	}
-	.complement{
-		color:	complement($cloud);
-	}
-}
-
-.ice{
-	color: 	rgba($ice, 1);
-	.darken{
-		color:	darken($ice, 20%);
-	}
-	.lighten{
-		color:	lighten($ice, 40%);
-	}
-	.complement{
-		color:	complement($ice);
-	}
-}
-
-.dark-blue{
-	color: 	rgba($dark-blue, 1);
-	.darken{
-		color:	darken($dark-blue, 20%);
-	}
-	.lighten{
-		color:	lighten($dark-blue, 40%);
-	}
-	.complement{
-		color:	complement($dark-blue);
-	}
-}
-
-.light-blue{
-	color: 	rgba($light-blue, 1);
-	.darken{
-		color:	darken($light-blue, 20%);
-	}
-	.lighten{
-		color:	lighten($light-blue, 40%);
-	}
-	.complement{
-		color:	complement($light-blue);
-	}
-}
-
-.primary{
-  color: rgba($primary, 1);
-  .darken{
-    color: darken($primary, 20%);
-  }
-  .lighten{
-    color: lighten($primary, 40%);
-  }
-  .complement{
-    color: complement($primary);
-  }
-}
-
-.secondary{
-  color: $secondary;
-  .darken{
-    color: darken($secondary, 20%);
-  }
-  .lighten{
-    color: lighten($secondary, 40%);
-  }
-  .complement{
-    color: complement($secondary);
-  }
-}
-
-.tertiary{
-  color: $tertiary;
-  .darken{
-    color: darken($tertiary, 20%);
-  }
-  .lighten{
-    color: lighten($tertiary, 40%);
-  }
-  .complement{
-    color: complement($tertiary);
-  }
-}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *   Colored Elements
@@ -215,6 +89,12 @@ a{
 .navbar-default .navbar-brand {
   color: $black;
 }
+
+nav.navbar-default ul.navbar-nav > li > a {
+  color: $white; }
+
+nav.navbar-default ul.navbar-nav > li > a:hover {
+  color: $ice; }
 /* Form page header color */
 section > .page-header {
   background-color: $secondary;
@@ -268,4 +148,9 @@ form button[data-button-type='custom']:hover {
   &:hover{
     color: rgba($primary, .5);
   }
+}
+
+/* Table Hover Color */
+div.widget table.hover tr:hover{
+	background:$ice;
 }

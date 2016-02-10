@@ -40,26 +40,50 @@ $(function(){
 
 
 $(function(){
-  // Ajax call to get HTML that builds the submissions table via a callback
-  $.ajax({
-      method: 'get',
-      url: '?partial=submissions.json',
-      data: {"submissionType":"Submissions"},
-      success: function(data, textStatus, jqXHR){
-          // Create DataTable for Object
-          var submissionsTable = $('#submissionsTable').DataTable(data);
+	// Ajax call to get HTML that builds the submissions table via a callback
+	$.ajax({
+	  method: 'get',
+	  url: '?partial=submissions.json',
+	  data: {"submissionType":"Submissions"},
+	  success: function(data, textStatus, jqXHR){
+		  // Create DataTable for Object
+		  $.each(data.data, function(index, datum){
+			if(datum["fa-logo"] != undefined){
+				datum["label"] = "<i class='fa " + datum["fa-logo"] + "'></i>&nbsp;&nbsp;" + datum["label"];
+			}
+		  });
+		  var submissionsTable = $('#submissionsTable').DataTable(data);
 
-          // On click Function for Row Buttons
-          $('#submissionsTable tbody').on( 'click', 'button', function () {
+		  // On click Function for Row Buttons
+		  $('#submissionsTable tbody').on('click', 'tr', function (evt) {
+			window.location.href=bundle.kappLocation() + "?submission_id=" + this.id;
+		  });
+		  
+	  },
+	  dataType: "json",
+	  error: function(jqXHR, textStatus, errorThrown){
+		  $('#submissionsTable').html('<b>Error fetching Submissions for the </b>');
+	  }
+	});
+  
+	$.ajax({
+		method:		'get',
+		url:		'?partial=submissions.json',
+		data:		{"submissionType":	"Approvals"},
+		dataType:	'json',
+		success:	function(data, textStatus, jqXHR){
+			// Create DataTable for Object
+			var approvalsTable = $('#assignedTasksTable').DataTable(data);
 
-          });
-          
-      },
-      dataType: "json",
-      error: function(jqXHR, textStatus, errorThrown){
-          $('#submissionsTable').html('<b>Error fetching Submissions for the </b>');
-      }
-  });
+			// On click Function for Row Buttons
+			$('#assignedTasksTable tbody').on( 'click', 'tr', function () {
+				window.location.href=bundle.spaceLocation() + "/submissions/" + this.id;
+			});
+		},
+		error:		function(jqXHR, textStatus, errorThrown){
+			$("#assignedTasksTable").html("Error fetching approvals");
+		}
+	});
 });
 
 /**
