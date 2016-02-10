@@ -331,6 +331,9 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *   Colored Elements
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+html, body {
+  background: #D9D9D9; }
+
 /* Default <a> tag*/
 a {
   color: #428bca; }
@@ -402,5 +405,19 @@ form button[data-button-type='custom']:hover {
 /* Table Hover Color */
 div.widget table.hover tr:hover {
   background: #A1C4D0; }
+
+/* Login Form */
+header.login-header {
+  background: #000000; }
+
+div.login-container a {
+  color: #E31937; }
+
+div.login-container button {
+  background: #991F3D;
+  color: #FFFFFF; }
+
+div.login-container div.warnings {
+  color: #E31937; }
 
 /*# sourceMappingURL=colors.css.map */

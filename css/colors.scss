@@ -76,6 +76,9 @@ $gray-darkest:	#292929; //rgb(41, 41, 41)
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *   Colored Elements
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+html,body{
+	background:$gray;
+}
 
 /* Default <a> tag*/
 a{
@@ -154,3 +157,22 @@ form button[data-button-type='custom']:hover {
 div.widget table.hover tr:hover{
 	background:$ice;
 }
+
+/* Login Form */
+header.login-header{
+	background:$black;
+}
+
+div.login-container a{
+	color:$red;
+}
+
+div.login-container button{
+	background:$beet;
+	color:$white;
+}
+
+div.login-container div.warnings{
+	color:$red;
+}
+

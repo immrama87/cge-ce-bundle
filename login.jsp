@@ -1,11 +1,10 @@
 <%@include file="bundle/initialization.jspf" %>
-<bundle:layout page="layouts/layout.jsp">
+<bundle:layout page="layouts/login.jsp">
     <bundle:variable name="head">
         <title>${text.escape(kapp.name)} Login</title>
     </bundle:variable>
-    <h1>Login</h1>
     <section>
-      <form action="<c:url value="/${space.slug}/app/login.do"/>" method="POST">
+      <form class="login-form" action="<c:url value="/${space.slug}/app/login.do"/>" method="POST">
           <!-- CSRF Token field -->
           <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
@@ -17,19 +16,27 @@
 
           <!-- Username field -->
           <div class="form-group">
-            <label for="j_username">${resourceBundle.getString("auth.login.username")}</label>
-            <input type="text" name="j_username" id="j_username" class="form-control" autofocus/>
+            <label for="j_username">${resourceBundle.getString("auth.login.username")}:</label>
+            <input type="text" name="j_username" id="j_username" class="" autofocus/>
           </div>
 
           <!-- Password field -->
           <div class="form-group">
-            <label for="j_password">${resourceBundle.getString("auth.login.password")}</label>
-            <input type="password" name="j_password" id="j_password" class="form-control" autocomplete="off"/>
+            <label for="j_password">${resourceBundle.getString("auth.login.password")}:</label>
+            <input type="password" name="j_password" id="j_password" class="" autocomplete="off"/>
           </div>
+		  
+		  <div class="pw-forget">
+			<a href="#">Forgot my password</a>
+		  </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">${resourceBundle.getString("auth.login.submit")}</button>
+            <button type="submit" class="btn btn-login">Sign In</button>
           </div>
+		  
+		  <div class="eligible">
+			Not a member? <a href="#">Contact us</a> to see if you are eligible
+		  </div>
       </form>
   </section>
 </bundle:layout>
