@@ -19,5 +19,11 @@
 				</li>
 			</c:if>
 		</c:forEach>
+		<li class="category">
+			<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=profile" aria-label="Update Profile">
+				<i class="fa fa-user"></i>
+				<span>Update Profile</span>
+			</a>
+		</li>
 	</ul>
 </div>
