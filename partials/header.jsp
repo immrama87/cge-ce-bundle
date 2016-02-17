@@ -2,7 +2,7 @@
 <%@include file="../bundle/initialization.jspf" %>
 <nav class="navbar navbar-default bg-black">
     <div class="container-fluid">
-        <div class="navbar-header col-xs-1">
+        <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
             data-target="#navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
