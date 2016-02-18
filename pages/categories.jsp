@@ -26,12 +26,12 @@ request.setAttribute("category", category);
                                 <a href="${bundle.spaceLocation}/${kapp.slug}/${form.slug}">
                                     <c:choose>
                                         <c:when test="${not empty form.getAttributeValue('Image')}">
-                                            <div class="icon">
+                                            <div class="icon-category">
                                                 <img src="${bundle.location}/images/${form.getAttributeValue('Image')}"/>
                                             </div>
                                         </c:when>
                                         <c:otherwise>
-                                            <div class="icon">
+                                            <div class="icon-category">
                                                 <img src="${bundle.location}/images/placeholder.png"/>
                                             </div>
                                         </c:otherwise>

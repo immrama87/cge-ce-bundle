@@ -106,3 +106,10 @@ Tables
 table.hover tr{
 	cursor:pointer;
 }
+
+.icon-category img
+{
+	max-width: 150px;
+	max-height: 150px;
+	padding: 0;
+}
