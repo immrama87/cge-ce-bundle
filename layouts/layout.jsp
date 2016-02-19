@@ -54,14 +54,14 @@
     </head>
     <body>
         <div class="view-port">
-            <c:if test="${not empty identity}">
-                <c:import url="${bundle.path}/partials/header.jsp" charEncoding="UTF-8"/>
-            </c:if>
 			<div class="col-md-2 hidden-xs bg-gray-darkest sidebar">
 				<c:import url="${bundle.path}/partials/sidebar.jsp" charEncoding="UTF-8"/>
 			</div>
 			<div class="col-xs-12 col-md-10 main-content">
-				<bundle:yield/>
+	            <c:if test="${not empty identity}">
+                    <c:import url="${bundle.path}/partials/header.jsp" charEncoding="UTF-8"/>
+                </c:if>
+                <bundle:yield/>
 			</div>
             <c:import url="${bundle.path}/partials/footer.jsp" charEncoding="UTF-8"/>
         </div>

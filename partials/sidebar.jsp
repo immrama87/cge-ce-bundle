@@ -1,7 +1,21 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
 <div>
+	<div class="bg-black">
+	    <c:if test="${kapp != null}">
+	        <a class="logo bg-black" href="${bundle.kappLocation}">
+	            <c:if test="${not empty kapp.getAttribute('logo-url')}">
+	                <img class="bg-black" src="${bundle.location}/images/${kapp.getAttribute('logo-url').value}" alt="logo">
+	            </c:if>
+	            <c:if test="${empty kapp.getAttribute('logo-url')}">
+	                <i class="fa fa-home"></i> ${text.escape(kapp.name)}
+	            </c:if>
+	        </a>
+	    </c:if>
+	</div>
+
 	<ul class="sidebar-nav">
+
 		<li class="category">
 			<a class="white color-hover-ice" href="javascript:void(0);" aria-label="My Dashboard">
 				<i class="fa fa-th-large"></i>

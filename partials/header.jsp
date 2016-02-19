@@ -2,6 +2,7 @@
 <%@include file="../bundle/initialization.jspf" %>
 <nav class="navbar navbar-default bg-black">
     <div class="container-fluid">
+    
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
             data-target="#navbar-collapse-1" aria-expanded="false">
@@ -10,16 +11,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <c:if test="${kapp != null}">
-                <a class="navbar-brand" href="${bundle.kappLocation}">
-                    <c:if test="${not empty kapp.getAttribute('logo-url')}">
-                        <img src="${bundle.location}/images/${kapp.getAttribute('logo-url').value}" alt="logo">
-                    </c:if>
-                    <c:if test="${empty kapp.getAttribute('logo-url')}">
-                        <i class="fa fa-home"></i> ${text.escape(kapp.name)}
-                    </c:if>
-                </a>
-            </c:if>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
