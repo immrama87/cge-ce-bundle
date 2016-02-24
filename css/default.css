@@ -36,8 +36,8 @@ body canvas {
   display: none;
 }
 header {
-  background-color: #a3a5a7;
-  margin-bottom: 1rem;
+ /* background-color: #a3a5a7; 
+  margin-bottom: 1rem;   */
   line-height: 1.5;
 }
 section > .page-header {
@@ -135,9 +135,9 @@ img.desaturate {
 }
 /* Navbar Search height fix*/
 .navbar-form form .form-group > .form-control {
-  padding: 0;  /*0.6rem 1.2rem;*/
+  padding: 0.6rem 1.2rem;
   margin-right: 1rem;
-  height: auto;
+  height: 28px;
   border: 1px solid rgba(49, 47, 56, 0.25); /* $black */
   outline: none;
 }

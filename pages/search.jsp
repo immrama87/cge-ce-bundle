@@ -12,7 +12,7 @@
             <form action="${bundle.kappLocation}" method="GET" role="form">
                 <div class="form-group has-feedback">
                     <input type="hidden" value="search" name="page">
-                    <input type="text" class="states form-control x" name="q" value="${param['q']}"/>
+                    <input type="text" class="form-control x" name="q" value="${param['q']}"/>
                 </div>
             </form>
         </div>

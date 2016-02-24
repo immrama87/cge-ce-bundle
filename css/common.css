@@ -109,14 +109,46 @@ table.hover tr{
 	cursor:pointer;
 }
 
+/*
 .icon-category img
 {
 	max-width: 150px;
 	max-height: 150px;
 	padding: 0;
 }
-
+*/
 a.logo img{
 	height:4em;
 	display:block;
 }
+
+/* Content slide search */
+header.main form.portal-search {
+	padding: 0;
+	margin: 0.75em 0 0 4em;
+	display:inline-block;
+}
+
+header.main form.portal-search input[type="text"] {
+  width: 420px;
+  float: left;
+  min-height: 24px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius:0;
+  height: 28px;
+  margin: 0;
+  -webkit-appearance: none; 
+  padding-left:1.25em;
+  font-weight:bold;}
+
+header.main form.portal-search button[type="submit"] {
+  width: 40px;
+  height: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em; 
+  padding-left:0.5em;}
+

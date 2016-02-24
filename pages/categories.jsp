@@ -5,6 +5,9 @@ String category = request.getParameter("category");
 request.setAttribute("category", category);
 %>
 <bundle:layout page="${bundle.path}/layouts/layout.jsp">
+    <bundle:stylepack>
+        <bundle:style src="${bundle.location}/css/category.css" />
+    </bundle:stylepack>
     <bundle:variable name="head">
         <title>Unify360 - ${text.escape(kapp.getCategory(category).name)}</title>
     </bundle:variable>
@@ -16,7 +19,7 @@ request.setAttribute("category", category);
     <section class="categories">
         <div class="row">
             <section class="col-md-6 templates">
-                <div class="templates background-gray-lightest">
+                <div class="templates bg-white">
                     <header>
                         <p>Select a type of <span class="list-label">${text.escape(kapp.getCategory(category).name)}</span> below:</p>
                     </header>
@@ -26,12 +29,12 @@ request.setAttribute("category", category);
                                 <a href="${bundle.spaceLocation}/${kapp.slug}/${form.slug}">
                                     <c:choose>
                                         <c:when test="${not empty form.getAttributeValue('Image')}">
-                                            <div class="icon-category">
+                                            <div class="icon">
                                                 <img src="${bundle.location}/images/${form.getAttributeValue('Image')}"/>
                                             </div>
                                         </c:when>
                                         <c:otherwise>
-                                            <div class="icon-category">
+                                            <div class="icon">
                                                 <img src="${bundle.location}/images/placeholder.png"/>
                                             </div>
                                         </c:otherwise>
@@ -48,14 +51,14 @@ request.setAttribute("category", category);
                     <header>
                         <span>My <span class="ticket-label">${text.escape(kapp.getCategory(category).name)}</span> Tickets</span>
                     </header>
-                    <section class="list background-gray-lightest">
+                    <section class="list bg-white">
                     </section>
                 </div>
                 <div class="change-tickets ticket-list">
                     <header>
                         <span>My Change Requests</span>
                     </header>
-                    <section class="list background-gray-lightest">
+                    <section class="list bg-white">
                     </section>
                 </div>
             </section>
