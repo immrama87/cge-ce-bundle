@@ -5,6 +5,7 @@ header{
 	padding:0 2em;
 	height:5%;
 }
+
 header h3{
 	margin:1em 1em;
 }
@@ -76,7 +77,7 @@ div.templates div.template{
 }
 
 div.templates div.template div.icon img{
-	width:70%;
+	width:60%;
 	margin:0 auto;
 	margin-bottom:1em;
 }
