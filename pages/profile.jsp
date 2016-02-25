@@ -4,33 +4,37 @@
 	<bundle:variable name="head">
 		<title>${text.escape(space.name)} Profile</title>
 	</bundle:variable>
-	<div class="container">
-		<div class="page-header">
-			<h2>Edit Your Profile</h2>
-		</div>
-		<div class="card">
-			<div class="panel-body">
-				<div class="form-group">
-					<label for="email" class="control-label">Email</label>
-					<input id="email" name="email" class="form-control" value="${identity.user.email}">
-				</div>
-				<div class="form-group">
-					<label for="displayName" class="control-label">Display Name</label>
-					<input id="displayName" name="displayName" class="form-control" value="${identity.user.displayName}">
-				</div>
-				<div class="form-group">
-					<label for="password" class="control-label">Password</label>
-					<input id="password" type="password" name="password" class="form-control">
-				</div>
-				<div class="form-group">
-					<label for="passwordConfirmation" class="control-label">Password Confirmation</label>
-					<input id="passwordConfirmation" type="password" name="passwordConfirmation" class="form-control">
+	<div class="form-wrap">
+		<section class="page">
+			<header>
+				<h3 class="header-label color-black">Edit Your Profile</h3>
+			</header>
+			<div class="page-border page-padding">
+				<div class="card">
+					<div class="panel-body">
+						<div class="form-group">
+							<label for="email" class="control-label">Email</label>
+							<input id="email" name="email" class="form-control" value="${identity.user.email}">
+						</div>
+						<div class="form-group">
+							<label for="displayName" class="control-label">Display Name</label>
+							<input id="displayName" name="displayName" class="form-control" value="${identity.user.displayName}">
+						</div>
+						<div class="form-group">
+							<label for="password" class="control-label">Password</label>
+							<input id="password" type="password" name="password" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="passwordConfirmation" class="control-label">Password Confirmation</label>
+							<input id="passwordConfirmation" type="password" name="passwordConfirmation" class="form-control">
+						</div>
+					</div>
+					<div class="panel-footer">
+						<button class="btn btn-success save-profile">Save</button>
+					</div>
 				</div>
 			</div>
-			<div class="panel-footer">
-				<button class="btn btn-success save-profile">Save</button>
-			</div>
-		</div>
+		</section>
 	</div>
 </bundle:layout>
 <script>
