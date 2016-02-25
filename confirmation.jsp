@@ -5,9 +5,9 @@
 <title>${text.escape(form.name)}</title>
 </bundle:variable>
 <section class="page">
-    <div class="page-header">
-        <h1>${text.escape(form.name)}</h1>
-    </div>
+    <header>
+        <h3 class="color-black">${text.escape(form.name)}</h3>
+    </header>
     <div class='content'>
         <div class='row'>
             <div class="col-xs-12">
@@ -15,6 +15,8 @@
                   use the default text below, otherwise use the page content.
                   An empty 'current page' means there is no page defined.
             --%>
+            <section class="page">
+            <div class="page-border page-padding">
                 <c:choose>
                   <c:when test='${empty submission.currentPage}'>
                     <h4>Thank you for your submission</h4>
@@ -25,6 +27,8 @@
                     <app:bodyContent/>
                   </c:otherwise>
                 </c:choose>
+                </div>
+                </section>
             </div>
         </div>
     </div>

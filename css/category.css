@@ -3,7 +3,7 @@
 div#loader { text-align: center; }
 header{
 	padding:0 2em;
-	height:5%;
+	height:45px;
 }
 
 header h3{
@@ -23,7 +23,7 @@ section.categories{
 }
 
 section.categories div.row{
-	height:85%;
+	height:calc(100% - 110px);
 	width:100%;
 }
 
@@ -114,12 +114,12 @@ section.tickets div.ticket-list header{
 	padding:0 1em;
 	font-size:1.2em;
 	font-weight:bold;
-	height:12%;
+	height:40px;
 	padding-top:0.5em;
 }
 
 section.tickets div.ticket-list section.list{
-	height:88%;
+	height:calc(100% - 40px);
 	border-bottom-right-radius:0.5em;
 	border-bottom-left-radius:0.5em;
 }

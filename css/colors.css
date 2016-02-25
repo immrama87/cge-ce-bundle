@@ -425,3 +425,7 @@ div.login-container div.warnings {
   color: #E31937; }
 
 /*# sourceMappingURL=colors.css.map */
+
+.display-page form#pageQuestionsForm,
+.display-page div#pageQuestionsForm {
+  background-color: whitesmoke; }
