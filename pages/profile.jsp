@@ -30,7 +30,7 @@
 						</div>
 					</div>
 					<div class="panel-footer">
-						<button class="btn btn-success save-profile">Save</button>
+						<button class="btn btn-info save-profile bg-beet">Save</button>
 					</div>
 				</div>
 			</div>
