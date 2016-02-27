@@ -61,7 +61,7 @@ div.messages{
 }
 
 .messages div.shift{
-	font-size:2em;
+	font-size:1.4em;
 	position:absolute;
 	width:1em;
 	height:1em;
@@ -90,16 +90,17 @@ div.messages{
 }
 
 .messages div.shift.left{
-	left:-0.5em;
+	left:-0.9em;
 }
 
 .messages div.shift.right{
-	right:0.5em;
+	right:-0.2em;
 }
 
 .messages div.shift.left, .messages div.shift.right{
 	height:100%;
 	vertical-align:middle;
+	padding-top: 20px;
 }
 
 /*~~~~~~~~~~~~~~~~~

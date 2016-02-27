@@ -1,4 +1,5 @@
 /*catalog.css*/
+/*
 section.quick-links div.icons div.panel{
 	background:transparent;
 }
@@ -60,3 +61,186 @@ section.catalog section.quick-links{
 section.widgets{
 	height:55%;
 }
+*/
+/*Added new stuf*/
+
+@charset "utf-8";
+
+section.catalog{
+	width:100%;
+	height:100%;
+	overflow-y:auto;
+}
+
+section.catalog section.welcome{
+	height:15%;
+	background:black;
+	min-height:9em;
+	text-align:center;
+	font-size:0.75em;
+}
+
+section.catalog section.welcome div.h1{
+	margin-top:0;
+	padding-top:1em;
+}
+
+section.catalog section.quick-links{
+	height:30%;
+	min-height:21em;
+}
+
+@media(max-width:1024px){
+	section.catalog section.quick-links{
+		min-height:14em;
+	}
+}
+
+section.catalog div.icons{
+	background: #000000; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #000000 0%,#000000 50%,#151515 75%,#292929 85%,#151515 95%,#000000 100%);
+	background: -moz-linear-gradient(top,  #000000 0%, #000000 50%, #151515 75%, #29292 85%, #151515 95%, #000000 100%);
+	background: linear-gradient(to bottom,  #000000 0%,#000000 50%,#151515 75%,#292929 85%,#151515 95%,#000000 100%);
+	margin:0 !important;
+	height:100%;
+}
+
+section.catalog div.row:first-child {
+    margin-top: 30px;
+}
+/* Tiles */
+section.catalog div.panel{
+	background:none;
+}
+section.catalog div.panel a{
+	text-decoration:none;
+}
+section.catalog div.icon{
+	width:35%;
+	position:relative;
+	margin:0 auto;
+}
+
+section.catalog div.icon:before{
+	content:"";
+	display:block;
+	padding-top:100%;
+}
+
+section.catalog div.row:first-child {
+    margin-bottom: 20px;
+}
+/* Label */
+section.catalog div.panel div.iconLabel {
+    font-size: 1em;
+    text-align: center;
+	margin-top: 4em;
+    display: block;
+    padding: 0 0 0 10px;
+    line-height: inherit;
+    font-weight: normal;
+}
+/* Drop Shadow */
+section.catalog div.panel div.drop-shadow{
+	background:url('../images/dropshadow.png');
+	background-size:10em 2em;
+	height:2em;
+	width:10em;
+	margin:0 auto;
+	margin-top:2em;
+}
+section.catalog section.widgets{
+	height:55%;
+	min-height:38em;
+	padding-top:2em;
+}
+
+/*
+@media(min-height: 909px){
+	section.catalog section.widgets{
+		display:none;
+	}
+}
+*/
+section.catalog section.widgets div.announcements{
+	width:95%;
+	box-shadow:0 0 0.5em rgba(0,0,0,0.5);
+	margin:0 auto;
+	border-radius:0.5em;
+	position:relative;
+	height:28%;
+	min-height:10em;
+}
+
+section.catalog section.widgets div.announcements div.title{
+	text-align:center;
+	border-top-left-radius:0.5em;
+	border-bottom-left-radius:0.5em;
+	height:100%;
+}
+
+section.catalog section.widgets div.announcements div.title i{
+	font-size:6em;
+	margin-bottom:0.1667em;
+}
+
+section.catalog section.widgets div.announcements div.title h4{
+	font-size:1em;
+	font-weight:bold;
+}
+
+section.catalog section.widgets div.announcements div.messages{
+	height:100%;
+	padding:0;
+	border-top-right-radius:0.5em;
+	border-bottom-right-radius:0.5em;
+}
+
+section.catalog section.widgets div.announcements div.messages div.row{
+	margin:0;
+	height:100%;
+	overflow:hidden;
+}
+
+section.catalog section.widgets div.announcements div.messages div.row div.message{
+	height:100%;
+	box-shadow:-0.25em 0 0.25em rgba(0,0,0,0.1);
+	overflow:hidden;
+}
+
+section.catalog section.widgets div.announcements div.messages div.row div.message div.date{
+	width:25%;
+	float:left;
+	text-align:center;
+}
+section.catalog section.widgets div.announcements div.messages div.row div.message div.date div.day{
+	font-size:4em;
+}
+
+section.catalog section.widgets div.announcements div.messages div.row div.message div.content{
+	width:70%;
+	float:right;
+	padding-top:1em;
+}
+
+section.catalog section.widgets div.announcements div.messages div.row div.message div.content h3.subject{
+	font-size:1.1em;
+	font-weight:bold;
+}
+
+section.catalog section.widgets div.itsm{
+	width:95%;
+	height:23em;
+	margin:0 auto;
+	margin-top:2em;
+}
+
+section.catalog section.widgets div.itsm div.widget{
+	height:100%;
+	padding:0;
+}
+
+section.catalog section.widgets div.itsm div.widget:last-child div.wrap{
+	width:100%;
+}
+

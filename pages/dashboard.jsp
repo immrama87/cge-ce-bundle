@@ -14,11 +14,11 @@
 	</header>
 	<section class="widgets background-gray">
 		<div class="row color-black announcements">
-			<div class="title col-md-2 color-gray-darkest">
+			<div class="title col-md-2 gray-darkest">
 				<i class="fa fa-bullhorn"></i>
 				<h4>Announcements</h4>
 			</div>
-			<div class="col-md-10 messages background-gray-lightest">
+			<div class="col-md-10 messages bg-gray-lightest">
 				<div class="row" container-max="3">
 				<%for(int i=0;i<messages.length;i++){%>
 					<div class="col-md-4 message<%if(i>2){%> hide<%}%>">

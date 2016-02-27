@@ -55,7 +55,7 @@
             <div class="col-md-6 tasks widget" widget-target="assigned-tasks" data-target="div.content" filter-target="div.filter">
                 <div class="wrap">
                     <header>
-                        <div class="label color-gray-darkest">
+                        <div class="label gray-darkest">
                             My Assigned Tasks
                         </div>
                         <div class="filter">
@@ -65,7 +65,7 @@
                             </a>
                         </div>
                     </header>
-                    <div class="content background-gray-lightest">
+                    <div class="content bg-gray-lightest">
                         <table id="assignedTasksTable" class="hover"></table>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
             <div class="col-md-6 reports widget" widget-target="service-management" data-target="div.content" filter-target="div.filter">
                 <div class="wrap">
                     <header>
-                        <div class="label color-gray-darkest">
+                        <div class="label gray-darkest">
                             Service Management View
                         </div>
                         <div class="filter">
@@ -83,7 +83,7 @@
                             </a>
                         </div>
                     </header>
-                    <div class="content background-gray-lightest">
+                    <div class="content bg-gray-lightest">
                         <table id="submissionsTable" class="hover"></table>
                     </div>
                 </div>
