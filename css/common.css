@@ -16,6 +16,9 @@ div.main-content{
 	padding:0;
 }
 
+div.pointer-events{
+	height:calc(100% - 4em);
+}
 /*~~~~~~~~~~~~~~~~~
 Header
 ~~~~~~~~~~~~~~~~~*/
@@ -152,4 +155,16 @@ header.main form.portal-search button[type="submit"] {
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em; 
   padding-left:0.5em;}
+
+
+.dropdown-menu {
+  border: none; }
+
+.dropdown-menu {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
 

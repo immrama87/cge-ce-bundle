@@ -19,7 +19,9 @@
 			<bundle:style src="${bundle.location}/libraries/jquery-datatables/jquery.dataTables.min.css" />
             <bundle:style src="${bundle.location}/css/default.css "/>
 			<bundle:style src="${bundle.location}/css/colors.css "/>
-			<bundle:style src="${bundle.location}/css/common.css "/>
+            <bundle:style src="${bundle.location}/css/common.css "/>
+            <bundle:style src="${bundle.location}/css/catalog.css "/>
+			<bundle:style src="${bundle.location}/css/package.css "/>
         </bundle:stylepack>
         <link href="${bundle.location}/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <bundle:scriptpack>

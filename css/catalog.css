@@ -73,9 +73,9 @@ section.catalog{
 }
 
 section.catalog section.welcome{
-	height:15%;
+	/*height:15%;*/
 	background:black;
-	min-height:9em;
+	min-height:7em;
 	text-align:center;
 	font-size:0.75em;
 }
@@ -86,8 +86,8 @@ section.catalog section.welcome div.h1{
 }
 
 section.catalog section.quick-links{
-	height:30%;
-	min-height:21em;
+	height:20%;
+	min-height:14em;
 }
 
 @media(max-width:1024px){
@@ -134,9 +134,9 @@ section.catalog div.row:first-child {
 section.catalog div.panel div.iconLabel {
     font-size: 1em;
     text-align: center;
-	margin-top: 4em;
+	margin-top: 1em;
     display: block;
-    padding: 0 0 0 10px;
+   /* padding: 0 0 0 10px; */
     line-height: inherit;
     font-weight: normal;
 }
@@ -150,7 +150,7 @@ section.catalog div.panel div.drop-shadow{
 	margin-top:2em;
 }
 section.catalog section.widgets{
-	height:55%;
+	height:66%;
 	min-height:38em;
 	padding-top:2em;
 }
