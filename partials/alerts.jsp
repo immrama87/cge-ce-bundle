@@ -31,7 +31,7 @@
 								<p class="body">${text.escape(alert.getValue('Message'))}</p>
 							</div>
 						</li>
-						<li class="divider"></li>
+						<li class="divider ${hideshow}"></li>
 					</c:forEach>
 					
 					<c:if test="${fn:length(alertsList) gt 4}">
