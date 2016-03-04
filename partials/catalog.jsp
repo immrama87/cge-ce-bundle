@@ -23,7 +23,7 @@
             <div class="row icons">
             	<div class="col-md-3">
             		<div class="panel">
-            			<a class="white color-hover-ice" href="javascript:void(0)" aria-label="Go To My Dashboard">
+            			<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=dashboard" aria-label="Go To My Dashboard">
             				<div class="icon" style="background: url(&quot;${bundle.location}/images/dashboard.png&quot;);background-size:contain;"></div>
             				<div class="iconLabel">Go To My Dashboard</div>
             				<div class="drop-shadow"></div>
