@@ -1,9 +1,6 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
 
-<!-- Build a list of variables to loop over later on. List includes alerts, submissions and approvals -->
-<c:set scope="request" var="approvalsList" value="${Submissions.searchByKapp(kapp, SubmissionHelper.requestsQueryOptions())}"/>
-<c:set scope="request" var="submissionsList" value="${Submissions.searchByKapp(kapp, SubmissionHelper.approvalsQueryOptions())}"/>
 <%--
 <bundle:stylepack>
 	<bundle:style src="${bundle.location}/css/catalog.css" />
@@ -53,42 +50,8 @@
         <section class="widgets bg-gray hidden-sm hidden-xs">
             <c:import url="${bundle.path}/partials/alerts.jsp"/>
             <div class="row itsm">
-                <div class="col-md-6 tasks widget" widget-target="assigned-tasks" data-target="div.content" filter-target="div.filter">
-                    <div class="wrap">
-                        <header>
-                            <div class="label gray-darkest">
-                                My Assigned Tasks
-                            </div>
-                            <div class="filter">
-                                <a href="javascript:void(0);">
-                                    Filter By
-                                    <i class="icon fa fa-chevron-circle-down"></i>
-                                </a>
-                            </div>
-                        </header>
-                        <div class="content bg-gray-lightest">
-                            <table id="assignedTasksTable" class="hover"></table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 reports widget" widget-target="service-management" data-target="div.content" filter-target="div.filter">
-                    <div class="wrap">
-                        <header>
-                            <div class="label gray-darkest">
-                                Service Management View
-                            </div>
-                            <div class="filter">
-                                <a href="javascript:void(0);">
-                                    Filter By
-                                    <i class="icon fa fa-chevron-circle-down"></i>
-                                </a>
-                            </div>
-                        </header>
-                        <div class="content bg-gray-lightest">
-                            <table id="submissionsTable" class="hover"></table>
-                        </div>
-                    </div>
-                </div>
+			    <c:import url="${bundle.path}/partials/approvals.jsp"/>
+			    <c:import url="${bundle.path}/partials/requests.jsp"/>
             </div>
         </section>
     </section>
