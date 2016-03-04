@@ -50,6 +50,7 @@ select.dtHour{
 }
 
 /* Form, confirmation display page */
+/*
 div.page-border,
 div.pageQuestionsForm {
     *zoom: 1;
@@ -65,6 +66,7 @@ div.pageQuestionsForm {
     width:auto;
     
 }
+*/
 
 div.page-border h3.page-label{
     margin:0;
