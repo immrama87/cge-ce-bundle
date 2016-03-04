@@ -14,7 +14,7 @@ request.setAttribute("category", category);
     <bundle:scriptpack>
     </bundle:scriptpack>
     <header>
-        <h3 class="header-label color-black">${text.escape(kapp.getCategory(category).name)}</h3>
+        <h2 class="header-label color-black">${text.escape(kapp.getCategory(category).name)}</h2>
     </header>
     <section class="categories">
         <div class="row">

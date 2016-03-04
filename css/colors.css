@@ -331,7 +331,15 @@
 .color-black {
   color: #000000; }
 
+/* Template Sections */
+.templateSection .sectionHeader {
+  color: #A0B13A;
+  background-color: whitesmoke; }
 
+.templateSection.border {
+  border-color: #c2c2c2; }
+
+  
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *   Colored Elements
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

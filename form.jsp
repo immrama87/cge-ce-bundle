@@ -7,7 +7,7 @@
     <div class="form-wrap">
       <section class="page" data-page="${page.name}">
         <header>
-          <h3 class="header-label color-black">${text.escape(form.name)}</h3>
+          <h2 class="header-label color-black">${text.escape(form.name)}</h2>
         </header>
         <c:if test="${param.review != null && pages.size() > 1}">
             <c:import url="partials/review.jsp" charEncoding="UTF-8"></c:import>

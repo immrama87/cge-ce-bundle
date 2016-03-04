@@ -7,7 +7,7 @@
 	<div class="form-wrap">
 		<section class="page">
 			<header>
-				<h3 class="header-label color-black">Edit Your Profile</h3>
+				<h2 class="header-label color-black">Edit Your Profile</h2>
 			</header>
 			<div class="page-border page-padding">
 				<div class="card">
