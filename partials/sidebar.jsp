@@ -17,7 +17,7 @@
 	<ul class="sidebar-nav">
 
 		<li class="category">
-			<a class="white color-hover-ice" href="javascript:void(0);" aria-label="My Dashboard">
+			<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=dashboard" aria-label="My Dashboard">
 				<i class="fa fa-th-large"></i>
 				<span>My Dashboard</span>
 			</a>
