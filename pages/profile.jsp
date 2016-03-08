@@ -14,11 +14,11 @@
 					<div class="panel-body">
 						<div class="form-group">
 							<label for="email" class="control-label">Email</label>
-							<input id="email" name="email" class="form-control" value="${identity.user.email}">
+							<input id="email" type="text" name="email" class="form-control" value="${identity.user.email}">
 						</div>
 						<div class="form-group">
 							<label for="displayName" class="control-label">Display Name</label>
-							<input id="displayName" name="displayName" class="form-control" value="${identity.user.displayName}">
+							<input id="displayName" type="text" name="displayName" class="form-control" value="${identity.user.displayName}">
 						</div>
 						<div class="form-group">
 							<label for="password" class="control-label">Password</label>

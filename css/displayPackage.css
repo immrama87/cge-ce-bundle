@@ -3,6 +3,7 @@
     outline:none;
 }
 /* Bootstrap overrides */
+/*
 select, 
 textarea, 
 input[type="text"], 
@@ -25,6 +26,7 @@ input[type="search"],
     box-shadow: inset 0 0 0.5em rgba(0,0,0,0.5);
     border:none;
 }
+*/
 select { height: 28px; }
 
 input.dateYear, input.dtYear{
@@ -100,23 +102,41 @@ div#reviewContent div.templateContent {
 div.page-border section.templateSection,
 div#reviewContent div.templateSection {
     margin: 0 0 30px 0;
-    padding: 10px 20px 10px 20px;
+    padding: 0px 20px 10px 20px;
     overflow: visible !important;
 }
 
 /* Section header */
-div.page-border div.sectionHeader,
-div#reviewContent div.sectionHeader {
+div.page-border section.templateSection h1 {
     overflow: visible !important;  
     font-weight: bold;
     font-size: 12pt;
     position: relative !important;
-    top: -20px;
+    top: -10px;
     padding-left: 3px;
     padding-right: 3px;
+    margin-top: 0px;
     display: inline-block;
     *display: inline;
     zoom: 1;
+    color: #A0B13A;
+    background-color: whitesmoke;
+}
+
+div.page-border div.radio input[type="radio"] {
+    margin: 0 10px 0 10px;
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    -webkit-box-shadow: none;
+}
+
+div.page-border div.checkbox input[type="checkbox"] {
+    margin: 0 10px 0 10px;
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    -webkit-box-shadow: none;
 }
 
 /* Question layer */
@@ -311,7 +331,27 @@ div.page-border section.templateSection.border {
     border-width: 1px;
 }
 
-
+.templateSection input,
+.templateSection select
+{
+    width: 90%;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
 
 
 /*

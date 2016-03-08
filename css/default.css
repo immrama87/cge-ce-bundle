@@ -316,8 +316,9 @@ form {
 }
 
 /* Make the label a block*/
+
 form label {
-  color: rgba(49, 47, 56, 0.75); /* $black */
+  color: rgba(49, 47, 56, 0.75); 
   display: block;
   font-size: 1.6rem;
   font-weight: 600;
@@ -334,20 +335,23 @@ form .checkbox label:first-child {
 form .checkbox label + input {
   padding-left: 2rem;
 }
+
 form input[type='text'],
 form textarea {
-  border: 0.2rem solid rgba(49, 47, 56, 0.5); /* $black */
+  border: 0.2rem solid rgba(49, 47, 56, 0.5); 
   outline: none;
 }
+
 form input[type='text']:focus,
 form textarea:focus {
-  border-color: rgb(66, 139, 202); /* $primary */
+  border-color: rgb(66, 139, 202); 
 }
+
 form select {
   padding: 0.6rem 1.2rem;
   font-size: 1.6rem;
   line-height: 1.42857143;
-  color: #312f38; /* $black */
+  color: #312f38; 
   background-color: #ffffff;
   background-image: none;
   border: 0.1rem solid #cccccc;
