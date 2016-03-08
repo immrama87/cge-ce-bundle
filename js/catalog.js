@@ -6,6 +6,7 @@ $(function(){
   if (!$('.navbar-form .typeahead').length){
     return;
   }
+
   var matcher = function(strs) {
     return function findMatches(query, callback) {
         var matches, substringRegex;

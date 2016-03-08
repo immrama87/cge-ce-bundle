@@ -338,7 +338,7 @@ form .checkbox label + input {
 
 form input[type='text'],
 form textarea {
-  border: 0.2rem solid rgba(49, 47, 56, 0.5); 
+/*  border: 0.2rem solid rgba(49, 47, 56, 0.5); */
   outline: none;
 }
 
@@ -376,7 +376,7 @@ form .btn {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  border-radius: 0;
+  border-radius: 4px;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   cursor: pointer;
