@@ -142,6 +142,12 @@ div.page-border div.checkbox input[type="checkbox"] {
     -webkit-box-shadow: none;
 }
 
+div.page-border div.form-group textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .radio label, .checkbox label {
     padding-left: 50px;
     margin-top: 4px;
