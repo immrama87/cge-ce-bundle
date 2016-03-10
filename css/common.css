@@ -52,6 +52,10 @@ ul.sidebar-nav > li > a > span{
 	vertical-align:middle;
 }
 
+ul.sidebar-nav li.active {
+    background: #991F3D;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~
 Messages Page Navigation
 ~~~~~~~~~~~~~~~~~~~~~~~*/

@@ -121,3 +121,30 @@ function submissionsTable (tableId) {
         ]
     });
 }
+
+$(document).ready(function() {
+
+  function getCategory(str) {
+    var s = '?page=';
+    var i = str.indexOf(s);
+   
+    if (i > -1) {
+      return str.substr(i + s.length, str.length - (i + s.length));
+    }
+    return str;
+  }
+
+  var url = window.location.href;  
+  var activePage = getCategory(url);
+
+  $('.sidebar-nav li a').each(function(){  
+    var currentPage = encodeURIComponent($(this).attr('aria-label'));
+
+    if (activePage.indexOf(currentPage) > -1) {
+      $(this).parent().addClass('active'); 
+    } 
+  });
+
+});
+
+

@@ -45,7 +45,6 @@
                     url : "?partial=setlocale",
                     data: {"timezone":moment.tz.guess()}
                 });
-            });
             </script>
         </c:if>
         <bundle:yield name="head"/>
