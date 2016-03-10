@@ -141,8 +141,8 @@ $(document).ready(function() {
     var currentPage = encodeURIComponent($(this).attr('aria-label'));
 
     if (activePage.indexOf(currentPage) > -1) {
-      $(this).parent().addClass('active'); 
-    } 
+      $(this).parent().addClass('active').append($('<div>').addClass('arrow-left')); 
+    } //addClass('active').append($('<div>').addClass('arrow-left'))
   });
 
 });
