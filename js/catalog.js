@@ -134,7 +134,8 @@ $(document).ready(function() {
     return str;
   }
 
-  var url = window.location.href;  
+  var url = window.location.href; 
+  //alert(window.location.href); 
   var activePage = getCategory(url);
 
   $('.sidebar-nav li a').each(function(){  
