@@ -17,7 +17,7 @@
 	<ul class="sidebar-nav">
 
 		<li class="category">
-			<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=dashboard" aria-label="My Dashboard">
+			<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=dashboard" aria-label="dashboard">
 				<i class="fa fa-th-large"></i>
 				<span>My Dashboard</span>
 			</a>
@@ -34,7 +34,7 @@
 			</c:if>
 		</c:forEach>
 		<li class="category">
-			<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=profile" aria-label="Update Profile">
+			<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=profile" aria-label="profile">
 				<i class="fa fa-user"></i>
 				<span>Update Profile</span>
 			</a>

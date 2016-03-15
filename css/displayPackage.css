@@ -290,13 +290,22 @@ a.fileLink {
     margin-bottom: 5px;
 }
 
+
+section.catalog table.dataTable thead th, table.dataTable thead td {
+    border-bottom: 0;
+}
+
+section.catalog table.dataTable.no-footer {
+    border-bottom: 0;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     /* Form, confirmation display page */
-    div.pageQuestionsForm { padding: 10px; }
+    div.pageQuestionsForm { padding: 0 10px 10px 10px; }
     /* Template Section */
     div.page-border section.templateSection,
-    div#reviewContent div.templateSection { padding: 10px; }
+    div#reviewContent div.templateSection { padding: 0 10px 10px 10px; }
     /* Question layer */
     div.page-border div.questionAnswer,
     div#reviewContent div.questionAnswer { margin: 0; }
