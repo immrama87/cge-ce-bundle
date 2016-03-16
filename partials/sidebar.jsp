@@ -1,7 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
 <div>
-	<div class="bg-black">
+	<div class="bg-black hidden-xs">
 	    <c:if test="${kapp != null}">
 	        <a class="logo bg-black" href="${bundle.kappLocation}">
 	            <c:if test="${not empty kapp.getAttribute('logo-url')}">

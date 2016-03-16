@@ -72,6 +72,10 @@
 					</div>
                 </form>
             </div>
+            <div class="col-md-2 col-sm-3 hidden-md hidden-sm hidden-lg bg-gray-darkest sidebar">
+                <c:import url="${bundle.path}/partials/sidebar.jsp" charEncoding="UTF-8"/>
+            </div>
+
         </c:if>
         </div>
     </div>

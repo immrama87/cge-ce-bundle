@@ -255,6 +255,8 @@ div.page-border div.templateButtonLayer input.templateButton{
     font-weight:normal;
 }
 
+
+
 .note{
     font-size: 10pt;
     margin: 0px 20px 0px 20px;
@@ -347,6 +349,10 @@ section.catalog table.dataTable.no-footer {
 div.page-border section.templateSection.border {
     border-color: #c2c2c2;
     border-radius: 0.4em;
+}
+
+div.form-group label {
+    font-size: 1.4rem;
 }
 
 .border {
