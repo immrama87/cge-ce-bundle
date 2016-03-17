@@ -20,6 +20,7 @@ section.categories{
 	padding:0 2em;
 	height:95%;
 	position:relative;
+	overflow-y: auto;
 }
 
 section.categories div.row{
@@ -29,6 +30,14 @@ section.categories div.row{
 
 div.templates, section.templates{
 	height:100%;
+	margin-bottom: 40px;
+	margin-top: 5px;
+}
+
+@media (max-width: 991px) {
+	div.templates, section.templates{
+		height:300px;
+	}
 }
 
 div.templates{
@@ -96,6 +105,7 @@ div.templates div.template h3{
 
 section.tickets{
 	height:100%;
+	margin-top: 5px;
 }
 
 section.tickets div.ticket-list{

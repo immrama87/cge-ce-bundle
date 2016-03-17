@@ -25,7 +25,7 @@ request.setAttribute("category", category);
                     </header>
                     <div class="wrap">
                         <c:forEach var="form" items="${kapp.getCategory(category).forms}">
-                            <div class="template col-sm-4">
+                            <div class="template col-xs-4">
                                 <a href="${bundle.spaceLocation}/${kapp.slug}/${form.slug}">
                                     <c:choose>
                                         <c:when test="${not empty form.getAttributeValue('Image')}">
@@ -46,7 +46,7 @@ request.setAttribute("category", category);
                     </div>
                 </div>
             </section>
-            <section class="col-sm-6 tickets">
+            <section class="col-md-6 tickets">
                 <div class="category-tickets ticket-list">
                     <header>
                         <span>My <span class="ticket-label">${text.escape(kapp.getCategory(category).name)}</span> Tickets</span>
