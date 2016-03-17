@@ -21,7 +21,7 @@
         </section>
         <section class="quick-links">
             <div class="row icons">
-            	<div class="col-md-3">
+            	<div class="col-xs-3">
             		<div class="panel">
             			<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=dashboard" aria-label="Go To My Dashboard">
             				<div class="icon" style="background: url(&quot;${bundle.location}/images/dashboard.png&quot;);background-size:contain;"></div>
@@ -33,7 +33,7 @@
             	<c:forEach items="${kapp.categories}" var="category">
             		<%-- If the category is not hidden, and it contains at least 1 form --%>
             		<c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && fn:toLowerCase(category.getAttribute('Visible On Home Page').value) eq 'true'}">
-            			<div class="col-md-3">
+            			<div class="col-xs-3">
             				<div class="panel">
             					<a class="white color-hover-ice" href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}" aria-label="${text.escape(category.name)}">
             						<div class="icon" style="background: url(&quot;${bundle.location}/images/${category.getAttribute('Home Page Image').value}&quot;);background-size:contain;"></div>
