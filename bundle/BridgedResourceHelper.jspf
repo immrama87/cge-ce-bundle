@@ -1,3 +1,5 @@
+<%@page import="java.util.*" %>
+<%@page import="javax.servlet.http.HttpServletRequest"%>
 <%@page import="com.kineticdata.bundles.Json"%>
 <%@page import="com.kineticdata.core.bridging.Count"%>
 <%@page import="com.kineticdata.core.bridging.Record"%>
@@ -16,12 +18,12 @@
     
     public static class BridgedResourceHelper {
         
-        private HttpServletRequest request;
+        private HttpServletRequest httpRequest;
         private String kappLocation;
         private String formSlug;
         
-        public BridgedResourceHelper(HttpServletRequest request, String kappLocation, String formSlug) {
-            this.request = request;
+        public BridgedResourceHelper(HttpServletRequest httpRequest, String kappLocation, String formSlug) {
+            this.httpRequest = httpRequest;
             this.kappLocation = kappLocation;
             this.formSlug = formSlug;
         }
@@ -140,9 +142,9 @@
         private Map<String,Object> request(String name, Map<String,String> parameters) throws Exception {
             // Build the URL
             StringBuilder url = new StringBuilder();
-            url.append(request.getScheme()).append("://").append(request.getServerName());
-            if (request.getServerPort() != 80 && request.getServerPort() != 443) {
-                url.append(":").append(request.getServerPort());
+            url.append(httpRequest.getScheme()).append("://").append(httpRequest.getServerName());
+            if (httpRequest.getServerPort() != 80 && httpRequest.getServerPort() != 443) {
+                url.append(":").append(httpRequest.getServerPort());
             }
             url.append(kappLocation).append("/").append(formSlug).append("/bridgedResources/").append(name);
             // Append parameters
@@ -160,10 +162,10 @@
             resourceRequest.addHeader("Content-Type", "application/x-www-form-urlencoded");
             // Set client
             BasicCookieStore cookieStore = new BasicCookieStore(); 
-            for (Cookie cookie : request.getCookies()) {
+            for (Cookie cookie : httpRequest.getCookies()) {
                 BasicClientCookie basicClientCookie = 
                     new BasicClientCookie(cookie.getName(), cookie.getValue());
-                basicClientCookie.setDomain(request.getServerName());
+                basicClientCookie.setDomain(httpRequest.getServerName());
                 cookieStore.addCookie(basicClientCookie);
             }
             HttpClient httpClient = HttpClientBuilder.create()
@@ -180,7 +182,5 @@
             // Return the parsed JSON
             return (Map<String,Object>)Json.parse(responseBody);
         }
-        
     }
-
 %>

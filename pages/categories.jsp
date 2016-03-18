@@ -47,13 +47,7 @@ request.setAttribute("category", category);
                 </div>
             </section>
             <section class="col-md-6 tickets">
-                <div class="category-tickets ticket-list">
-                    <header>
-                        <span>My <span class="ticket-label">${text.escape(kapp.getCategory(category).name)}</span> Tickets</span>
-                    </header>
-                    <section class="list bg-white">
-                    </section>
-                </div>
+			    <c:import url="${bundle.path}/partials/servicerequests.jsp"/>
                 <div class="change-tickets ticket-list">
                     <header>
                         <span>My Change Requests</span>
