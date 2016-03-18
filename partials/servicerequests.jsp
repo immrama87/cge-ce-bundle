@@ -25,7 +25,7 @@
 			<c:forEach var="record" items="${records}">
 				<tr>
 				 <td>${text.escape(record.get('incidentId'))}</td>
-				 <td>${text.escape(record.get('createdDateTime'))}</td>
+				 <td>${text.escape(fn:split(record.get('createdDateTime'), " ")[0])}</td>
 				 <td>${text.escape(record.get('status'))}</td>
 				 <td>${text.escape(record.get('description'))}</td>
 				</tr>
