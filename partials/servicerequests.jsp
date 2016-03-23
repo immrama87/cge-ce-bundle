@@ -24,7 +24,7 @@
 		  <tbody>
 			<c:forEach var="record" items="${records}">
 				<tr>
-				 <td>${text.escape(record.get('incidentId'))}</td>
+				 <td><a href="${kapp.slug}/incident-details?recID=${record.get('recID')}">${text.escape(record.get('incidentID'))}</a></td>
 				 <td>${text.escape(fn:split(record.get('createdDateTime'), " ")[0])}</td>
 				 <td>${text.escape(record.get('status'))}</td>
 				 <td>${text.escape(record.get('description'))}</td>
