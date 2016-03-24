@@ -2,7 +2,7 @@
 <%@include file="../bundle/initialization.jspf" %>
 
 <c:set var="params" value="${Resources.map()}"/>
-<c:set target="${params}" property="customerId" value="940a07e1604fa7c89307eb44a98e8c073ffd60bab8"/>
+<c:set target="${params}" property="customerID" value="${customerRecID}"/>
 <c:set var="records" value="${Resources.search('Incidents%20by%20customer', params)}"/>
 <div class="widget" widget-target="service-requests" data-target="div.content" >
 	<div class="wrap">
