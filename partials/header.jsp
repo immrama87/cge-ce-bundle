@@ -1,5 +1,6 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
+
 <nav class="navbar navbar-default bg-black">
     <div class="container-fluid">
     

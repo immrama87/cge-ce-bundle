@@ -1,4 +1,5 @@
 <%@include file="bundle/initialization.jspf" %>
+
 <bundle:layout page="layouts/login.jsp">
     <bundle:variable name="head">
         <title>${text.escape(kapp.name)} Login</title>
@@ -31,7 +32,7 @@
 		  </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-login">Sign In</button>
+            <button type="submit" id="submit" class="btn btn-login">Sign In</button>
           </div>
 		  
 		  <div class="eligible">
