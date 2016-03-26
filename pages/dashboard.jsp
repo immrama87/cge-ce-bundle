@@ -29,6 +29,9 @@
 					<c:import url="${bundle.path}/partials/approvals.jsp"/>
 					<c:import url="${bundle.path}/partials/requests.jsp"/>
 				</div>
+				<div class="row itsm">
+					<c:import url="${bundle.path}/partials/inventory.jsp"/>
+				</div>
 			</section>
 		</section>
 	</div>
