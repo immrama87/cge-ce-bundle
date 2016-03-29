@@ -1,11 +1,6 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
 
-<%--
-<bundle:stylepack>
-	<bundle:style src="${bundle.location}/css/catalog.css" />
-</bundle:stylepack>
---%>
 
 <bundle:layout page="${bundle.path}/layouts/layout.jsp">
 	<bundle:variable name="head">
@@ -25,13 +20,12 @@
 			</header>
 			<section class="widgets bg-gray hidden-sm hidden-xs">
 				<c:import url="${bundle.path}/partials/alerts.jsp"/>
-				<div class="row itsm">
-					<c:import url="${bundle.path}/partials/approvals.jsp"/>
-					<c:import url="${bundle.path}/partials/requests.jsp"/>
-				</div>
-				<div class="row itsm">
-					<c:import url="${bundle.path}/partials/inventory.jsp"/>
-				</div>
+				<c:import url="${bundle.path}/partials/perfstats.jsp"/>
+				<c:import url="${bundle.path}/partials/securityview.jsp"/>
+				<c:import url="${bundle.path}/partials/financeview.jsp"/>
+				<c:import url="${bundle.path}/partials/inventory.jsp"/>
+				<c:import url="${bundle.path}/partials/approvals.jsp"/>
+				<c:import url="${bundle.path}/partials/requests.jsp"/>
 			</section>
 		</section>
 	</div>

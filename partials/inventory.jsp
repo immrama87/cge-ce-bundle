@@ -3,7 +3,7 @@
 
 <c:set var="params" value="${Resources.map()}"/>
 <c:set var="records" value="${Resources.search('CloudPassage%20Servers')}"/>
-<div class="widget" widget-target="server-inventory" data-target="div.content" >
+<div class="col-md-6 widget report" widget-target="server-inventory" data-target="div.content" >
 	<div class="wrap">
 		<header>
 			<div class="label gray-darkest">

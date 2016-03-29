@@ -3,7 +3,7 @@
 
 <c:set scope="request" var="approvalsList" value="${Submissions.searchByKapp(kapp, SubmissionHelper.requestsQueryOptions())}"/>
 
-<div class="col-md-6 tasks widget" widget-target="assigned-tasks" data-target="div.content" filter-target="div.filter">
+<div class="col-md-6 tasks widget report" widget-target="assigned-tasks" data-target="div.content" filter-target="div.filter">
 	<div class="wrap">
 		<header>
 			<div class="label gray-darkest">
