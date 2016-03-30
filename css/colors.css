@@ -388,13 +388,17 @@ form .btn:hover {
 
 /* Custom Button styles */
 form button[data-button-type='custom'] {
+  /*border-color: #24B166;
+  color: #24B166;*/
   background-color: #991F3D;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+}
 
 /* Previous Page Custom :hover*/
 form button[data-button-type='previous-page']:hover,
 form button[data-button-type='custom']:hover {
-  background-color: rgba(36, 102, 177, 0.8); }
+  /* background-color: rgba(36, 177, 102, 0.8); */
+  background-color: rgba(36, 102, 177, 0.8);}
 
 /* Timeline Dot*/
 .timeline > ul > li:before {
