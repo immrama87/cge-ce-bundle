@@ -22,13 +22,13 @@ $(function() {
             method: 'post',
             dataType: 'json',
             contentType: 'application/json',
-            url: '/kinetic/${space.slug}/app/login.do',
+            url: '/kinetic/'+bundle.spaceSlug()+'/app/login.do',
             data: data,
             beforeSend: function(jqXHR, settings){
                console.log('before')
             },
             success: function(data, textStatus, jqXHR){
-               window.location = "${bundle.spaceLocation}/${kapp.slug}"
+               window.location = bundle.spaceLocation()+'/'+bundle.kappSlug()+'/'
                console.log('success')
             },
             error: function(jqXHR, textStatus, errorThrown){

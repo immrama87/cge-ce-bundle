@@ -1,6 +1,9 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="bundle/initialization.jspf" %>
 <%@include file="bundle/router.jspf" %>
+<c:if test="${identity.anonymous}">
+	<c:redirect url="/${space.slug}/app/login" />
+</c:if>
 <c:set var="customerRecordID" value="no identity object found" scope="session"/>
 <c:if test="${identity != null && identity.user.displayName != null}">
 	<c:set var="customerRecordID" value="searched for ${identity.user.displayName}" scope="session"/>

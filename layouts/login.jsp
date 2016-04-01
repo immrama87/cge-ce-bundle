@@ -33,6 +33,7 @@
             <bundle:script src="${bundle.location}/js/catalog.js" />
             <bundle:script src="${bundle.location}/js/review.js" />
 			<bundle:script src="${bundle.location}/js/jstz.min.js" />
+			<bundle:script src="${bundle.location}/js/login.js" />
         </bundle:scriptpack>
         <c:if test="${empty sessionScope.timezone}">
             <script>
