@@ -403,6 +403,7 @@ form button[data-button-type='previous-page'] {
 
 form button[data-button-type='custom'] {
   background-color: #ffffff;
+  /*border-color: rgb(36, 177, 102);*/ /* $tertiary */
   color: rgb(36, 177, 102); /* $tertiary */
 }
 form button[data-button-type='previous-page']:hover,
