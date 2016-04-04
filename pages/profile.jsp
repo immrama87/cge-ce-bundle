@@ -21,6 +21,10 @@
 							<input id="displayName" type="text" name="displayName" class="form-control" value="${identity.user.displayName}">
 						</div>
 						<div class="form-group">
+							<label for="groups" class="control-label">Security Groups</label>
+							<input id="groups" type="text" name="groups" class="form-control" value="${identity.groups}">
+						</div>
+						<div class="form-group">
 							<label for="password" class="control-label">Password</label>
 							<input id="password" type="password" name="password" class="form-control">
 						</div>
