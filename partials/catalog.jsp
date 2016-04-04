@@ -13,7 +13,7 @@
     <section class="catalog bg-black">
         <section class="welcome">
             <div class="h3 center white lighter">
-                Welcome ${text.escape(identity.user.displayName)} - ${text.escape(customerRecordID)}
+                Welcome ${text.escape(identity.user.displayName)}
             </div>
             <div class="h4 center dark-blue normal">
                 What would you like to do?

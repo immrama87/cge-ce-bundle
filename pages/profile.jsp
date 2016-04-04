@@ -13,16 +13,22 @@
 				<div class="card">
 					<div class="panel-body">
 						<div class="form-group">
+							<label for="groups" class="control-label">Security Groups</label>
+							<input id="groups" type="text" name="groups" class="form-control" value="${identity.groups}" disabled="true">
+						</div>
+						<div class="form-group">
+							<label for="customerId" class="control-label">ITSM Customer ID</label>
+							<input id="customerId" type="text" name="customerId" class="form-control" value="${text.escape(customerRecordID)}" disabled="true">
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
 							<label for="email" class="control-label">Email</label>
 							<input id="email" type="text" name="email" class="form-control" value="${identity.user.email}">
 						</div>
 						<div class="form-group">
 							<label for="displayName" class="control-label">Display Name</label>
 							<input id="displayName" type="text" name="displayName" class="form-control" value="${identity.user.displayName}">
-						</div>
-						<div class="form-group">
-							<label for="groups" class="control-label">Security Groups</label>
-							<input id="groups" type="text" name="groups" class="form-control" value="${identity.groups}">
 						</div>
 						<div class="form-group">
 							<label for="password" class="control-label">Password</label>
