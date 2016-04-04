@@ -3,23 +3,26 @@
 
 
 <bundle:layout page="${bundle.path}/layouts/layout.jsp">
+    <bundle:stylepack>
+        <bundle:style src="${bundle.location}/css/dashboard.css" />
+    </bundle:stylepack>
 	<bundle:variable name="head">
 		<title>${text.escape(space.name)} Dashboard</title>
 	</bundle:variable>
-	<div class="form-wrap">
-		<section class="catalog">
-			<header>
-				My Managed Services Dashboard
-				<div class="options">
-					<i class="icon fa fa-th-large"></i> View Options <i class="icon fa fa-caret-down"></i>
-					<div class="wrap hide" aria-hidden="true">
-						<ul class="options">
-						</ul>
-					</div>
+	<section class="dashboard">
+		<header>
+			My Managed Services Dashboard
+			<div class="options">
+				<i class="icon fa fa-th-large"></i> View Options <i class="icon fa fa-caret-down"></i>
+				<div class="wrap hide" aria-hidden="true">
+					<ul class="options">
+					</ul>
 				</div>
-			</header>
-			<section class="widgets bg-gray hidden-sm hidden-xs">
-				<c:import url="${bundle.path}/partials/alerts.jsp"/>
+			</div>
+		</header>
+		<section class="widgets bg-gray hidden-sm hidden-xs">
+			<c:import url="${bundle.path}/partials/alerts.jsp"/>
+			<section class="reports">
 				<c:import url="${bundle.path}/partials/perfstats.jsp"/>
 				<c:import url="${bundle.path}/partials/securityview.jsp"/>
 				<c:import url="${bundle.path}/partials/financeview.jsp"/>
@@ -28,5 +31,5 @@
 				<c:import url="${bundle.path}/partials/requests.jsp"/>
 			</section>
 		</section>
-	</div>
+	</section>
 </bundle:layout>

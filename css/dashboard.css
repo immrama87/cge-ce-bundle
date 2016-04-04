@@ -1,0 +1,152 @@
+/*dashboard.css*/
+
+@charset "utf-8";
+
+section.dashboard {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	padding: 1em 2.5em;
+}
+
+section.dashboard section.widgets{
+	min-height:38em;
+	padding-top:2em;
+}
+
+/*
+@media(min-height: 909px){
+	section.dashboard section.widgets{
+		display:none;
+	}
+}
+*/
+section.dashboard section.widgets div.announcements{
+	width:100%;
+	box-shadow:0 0 0.5em rgba(0,0,0,0.5);
+	margin:0 auto;
+	border-radius:0.5em;
+	position:relative;
+	height:28%;
+	min-height:10em;
+}
+
+section.dashboard section.widgets div.announcements div.title{
+	text-align:center;
+	border-top-left-radius:0.5em;
+	border-bottom-left-radius:0.5em;
+	height:100%;
+}
+
+section.dashboard section.widgets div.announcements div.title i{
+	font-size:6em;
+	margin-bottom:0.1667em;
+}
+
+section.dashboard section.widgets div.announcements div.title h4{
+	font-size:1em;
+	font-weight:bold;
+}
+
+section.dashboard section.widgets div.announcements div.messages{
+	height:100%;
+	padding:0;
+	border-top-right-radius:0.5em;
+	border-bottom-right-radius:0.5em;
+}
+
+section.dashboard section.widgets div.announcements div.messages div.row{
+	margin:0;
+	height:100%;
+	overflow:hidden;
+}
+
+section.dashboard section.widgets div.announcements div.messages div.row div.message{
+	height:100%;
+	box-shadow:-0.25em 0 0.25em rgba(0,0,0,0.1);
+	overflow:hidden;
+}
+
+section.dashboard section.widgets div.announcements div.messages div.row div.message div.date{
+	width:25%;
+	float:left;
+	text-align:center;
+}
+section.dashboard section.widgets div.announcements div.messages div.row div.message div.date div.day{
+	font-size:4em;
+}
+
+section.dashboard section.widgets div.announcements div.messages div.row div.message div.content{
+	width:70%;
+	float:right;
+	padding-top:1em;
+}
+
+section.dashboard section.widgets div.announcements div.messages div.row div.message div.content h3.subject{
+	font-size:1.1em;
+	font-weight:bold;
+}
+
+section.dashboard section.widgets div.itsm{
+	width:95%;
+	height:23em;
+	margin:0 auto;
+	margin-top:2em;
+}
+
+section.dashboard section.widgets div.itsm div.widget{
+	height:100%;
+	padding:0;
+}
+
+section.dashboard section.widgets div.itsm div.widget:last-child div.wrap{
+	width:100%;
+}
+
+li.messages ul.dropdown-menu {
+	width:28em;
+	color: black;
+}
+li.messages ul.dropdown-menu li.message{
+	height:9em;
+	overflow: hidden;
+    white-space: normal;
+    padding: 0.25em;
+    text-align: left;
+    padding-bottom: 0.8em;
+/*    box-shadow: 0 0.5em 0.125em -0.125em rgba(0,0,0,0.3);*/
+    margin-bottom: 0.25em;
+}
+
+li.messages ul.dropdown-menu li.message div.date{
+	width:25%;
+	float:left;
+	text-align:center;
+}
+li.messages ul.dropdown-menu li.message div.date div.day{
+	font-size:4em;
+}
+
+li.messages ul.dropdown-menu li.message div.content{
+	width:70%;
+	float:right;
+	padding-top:0.5em;
+}
+
+li.messages ul.dropdown-menu li.message div.content h3.subject{
+	font-size:1.1em;
+	font-weight:bold;
+}
+
+li.messages ul.scrollable-menu {
+    height: auto;
+    max-height: 500px;
+    overflow-x: hidden;
+}
+
+/*
+li.messages ul.dropdown-menu li.divider{
+    box-shadow: 0 0.5em 0.125em -0.125em rgba(0,0,0,0.3);
+}
+
+*/

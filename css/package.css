@@ -156,6 +156,12 @@ div.widget div.wrap div.content table th[class*="col-"]{
 	height:100%;
 }
 
+section.reports {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 2em;
+}
+
 div.report {
 	height: 25em;
 	padding: 0;
@@ -170,4 +176,8 @@ div.content iframe {
 	margin 0;
 	border-bottom-left-radius: 0.5em;
 	border-bottom-right-radius: 0.5em;
+}
+
+div.options {
+	float: right;
 }
