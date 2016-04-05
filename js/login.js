@@ -28,7 +28,7 @@ $(function() {
                console.log('before')
             },
             success: function(data, textStatus, jqXHR){
-               window.location = bundle.spaceLocation()+'/'+bundle.kappSlug()+'/'
+               window.location.href = bundle.spaceLocation()+'/'+bundle.kappSlug()+'/'
                console.log('success')
             },
             error: function(jqXHR, textStatus, errorThrown){
