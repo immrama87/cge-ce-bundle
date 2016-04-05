@@ -23,7 +23,6 @@
       } else {
         searchOptions.put("createdBy", new String[] {identity.getUsername()});
       }
-	  searchOptions.put("state", new String[] {"Submitted"});
       request.setAttribute("searchOptions", searchOptions);
       Calendar cal = Calendar.getInstance();
       cal.add(Calendar.YEAR, -1);
