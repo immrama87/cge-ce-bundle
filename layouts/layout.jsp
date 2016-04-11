@@ -37,6 +37,20 @@
             <bundle:script src="${bundle.location}/js/review.js" />
 			<bundle:script src="${bundle.location}/js/jstz.min.js" />
         </bundle:scriptpack>
+		<script>
+			bundle.getUrlParameter = function (sParam) {
+				var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+					sURLVariables = sPageURL.split('&'),
+					sParameterName,
+					i;
+				for (i = 0; i < sURLVariables.length; i++) {
+					sParameterName = sURLVariables[i].split('=');
+					if (sParameterName[0] === sParam) {
+						return sParameterName[1] === undefined ? true : sParameterName[1];
+					}
+				}
+			};
+		</script>
         <c:if test="${empty sessionScope.timezone}">
             <script>
             $(document).ready(function() {
