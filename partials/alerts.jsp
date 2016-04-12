@@ -1,6 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
 
+
 <bundle:scriptpack>
 	<bundle:script src="${bundle.location}/js/alerts.js"/>
 </bundle:scriptpack>
@@ -9,48 +10,46 @@
 
 <c:choose>
 	<c:when test="${orient eq 'vertical'}">
-		<ul class="dropdown-menu messages" aria-labelledby="drop1" container-max="4">
-			<c:choose>
-				<c:when test="${not empty space.getKapp('helper') && not empty space.getKapp('helper').getForm('alerts')}">
-					<c:set scope="request" var="alertsList" value="${Submissions.searchByForm(space.getKapp('helper').getForm('alerts'))}"/>
-					<c:forEach items="${alertsList}" var="alert" varStatus="loop">
-						<c:set scope="request" var="hideshow" value=""/>
-						<c:if test="${loop.index gt 3}">
-							<c:set scope="request" var="hideshow" value="hide"/>
-						</c:if>
-						<li class="message ${hideshow}">
-							<div class="date">
-								<div class="day"><fmt:formatDate type="both" pattern="d" timeZone="${timezone}" value="${alert.createdAt}" /></div>
-								<div class="mt">
-									<fmt:formatDate type="both" pattern="MMMM" timeZone="${timezone}" value="${alert.createdAt}" /><br />
-									<fmt:formatDate type="both" pattern="hh:mm a" timeZone="${timezone}" value="${alert.createdAt}" />
-								</div>
-							</div>
-							<div class="content">
-								<h3 class="subject gray-darkest">${text.escape(alert.getValue('Subject'))}</h3>
-								<p class="body">${text.escape(alert.getValue('Message'))}</p>
-							</div>
-						</li>
-						<li class="divider ${hideshow}"></li>
-					</c:forEach>
-					
-					<c:if test="${fn:length(alertsList) gt 4}">
-						<div class="shift up inactive" content-target="li.message">
-							<span>
-								<i class="icon fa fa-chevron-up"></i>
-							</span>
-						</div>
-						<div class="shift down" content-target="li.message">
-							<i class="icon fa fa-chevron-down"></i>
-						</div>
+		<c:choose>
+			<c:when test="${not empty space.getKapp('helper') && not empty space.getKapp('helper').getForm('alerts')}">
+				<c:set scope="request" var="alertsList" value="${Submissions.searchByForm(space.getKapp('helper').getForm('alerts'))}"/>
+				<c:forEach items="${alertsList}" var="alert" varStatus="loop">
+					<c:set scope="request" var="hideshow" value=""/>
+					<c:if test="${loop.index gt 3}">
+						<c:set scope="request" var="hideshow" value="hide"/>
 					</c:if>
-				</c:when>
-				<c:otherwise>
-					<li><a href="#"><i class="fa fa-pencil fa-fw"></i>Customer is missing supporting Alerts Data</a></li>
-					<li class="divider"></li>
-				</c:otherwise>
-			</c:choose>
-        </ul>
+					<li class="message ${hideshow}">
+						<div class="date">
+							<div class="day"><fmt:formatDate type="both" pattern="d" timeZone="${timezone}" value="${alert.createdAt}" /></div>
+							<div class="mt">
+								<fmt:formatDate type="both" pattern="MMMM" timeZone="${timezone}" value="${alert.createdAt}" /><br />
+								<fmt:formatDate type="both" pattern="hh:mm a" timeZone="${timezone}" value="${alert.createdAt}" />
+							</div>
+						</div>
+						<div class="content">
+							<h3 class="subject gray-darkest">${text.escape(alert.getValue('Subject'))}</h3>
+							<p class="body">${text.escape(alert.getValue('Message'))}</p>
+						</div>
+					</li>
+					<li class="divider ${hideshow}"></li>
+				</c:forEach>
+				
+				<c:if test="${fn:length(alertsList) gt 4}">
+					<div class="shift up inactive" content-target="li.message">
+						<span>
+							<i class="icon fa fa-chevron-up"></i>
+						</span>
+					</div>
+					<div class="shift down" content-target="li.message">
+						<i class="icon fa fa-chevron-down"></i>
+					</div>
+				</c:if>
+			</c:when>
+			<c:otherwise>
+				<li><a href="#"><i class="fa fa-pencil fa-fw"></i>Customer is missing supporting Alerts Data</a></li>
+				<li class="divider"></li>
+			</c:otherwise>
+		</c:choose>
 	</c:when>
 	<c:otherwise>
 		<div class="row color-black announcements">

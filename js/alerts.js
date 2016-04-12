@@ -20,7 +20,7 @@ $(function(){
 			}
 			
 			shiftOffset = parseInt(shiftOffset);
-			shiftMax = shiftOffset + parseInt(max);
+			shiftMax = shiftOffset + max;
 			
 			var contents = $(parent).find(contentTarget);
 			for(var i=0;i<contents.length;i++){
@@ -33,8 +33,6 @@ $(function(){
 			}
 			
 			$(parent).attr("shift-offset", shiftOffset);
-			
-			console.log(shiftOffset, contents.length);
 			
 			if(shiftOffset == contents.length - max){
 				$(parent).find("div.shift.right, div.shift.down").addClass("inactive");

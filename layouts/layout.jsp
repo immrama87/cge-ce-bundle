@@ -38,6 +38,8 @@
 			<bundle:script src="${bundle.location}/js/jstz.min.js" />
         </bundle:scriptpack>
 		<script>
+			bundle.username = "${identity.username}";
+			
 			bundle.getUrlParameters = function() {
 				var searchString = window.location.search.substring(1)
 					, params = searchString.split("&")

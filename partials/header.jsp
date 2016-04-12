@@ -1,6 +1,10 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
 
+<bundle:scriptpack>
+	<bundle:script src="${bundle.location}/js/alertPoller.js"/>
+</bundle:scriptpack>
+
 <nav class="navbar navbar-default bg-black">
     <div class="container-fluid">
     
@@ -44,18 +48,19 @@
                     </a>
                 </li>
                 <li class="messages white color-hover-ice">
-                    <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" cgi-expanded="false">
                         <span class="fa fa-bell"></span>
                     </a>
-                    <c:import url="${bundle.path}/partials/alerts.jsp?orient=vertical"/>
+					<ul id="user-alerts" class="dropdown-menu messages" aria-labelledby="drop1" container-max="4">
+					</ul>
                 </li>
                 <li class="dropdown white">
-                    <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         Hello, 
                         <span class="user-fullname">${text.escape(identity.user.displayName)} </span>
                         <span class="fa fa-chevron-circle-down"></span>
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="drop1">
+                    <ul class="dropdown-menu" aria-labelledby="drop2">
                         <li><a href="${bundle.spaceLocation}/${kapp.slug}?page=profile"><i class="fa fa-pencil fa-fw"></i> Edit Profile</a></li>
                         <li class="divider"></li>
                         <li><a href="${bundle.spaceLocation}/app/"><i class="fa fa-dashboard fa-fw"></i> Management Console</a></li>
