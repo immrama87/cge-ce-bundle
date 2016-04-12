@@ -38,6 +38,17 @@
 			<bundle:script src="${bundle.location}/js/jstz.min.js" />
         </bundle:scriptpack>
 		<script>
+			bundle.getUrlParameters = function() {
+				var searchString = window.location.search.substring(1)
+					, params = searchString.split("&")
+					, hash = {}
+					;
+				for (var i = 0; i < params.length; i++) {
+				  var val = params[i].split("=");
+				  hash[unescape(val[0])] = unescape(val[1]);
+				}
+				return hash;
+			};
 			bundle.getUrlParameter = function (sParam) {
 				var sPageURL = decodeURIComponent(window.location.search.substring(1)),
 					sURLVariables = sPageURL.split('&'),
