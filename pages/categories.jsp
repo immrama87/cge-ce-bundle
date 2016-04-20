@@ -47,7 +47,8 @@ request.setAttribute("category", category);
                 </div>
             </section>
             <section class="col-md-6 tickets">
-			    <c:import url="${bundle.path}/partials/servicerequests.jsp"/>
+				<!-- Temporary change until Cherwell bridge can be fixed -->
+			    <!-- c:import url="${bundle.path}/partials/servicerequests.jsp"/ -->
                 <div class="change-tickets ticket-list">
                     <header>
                         <span>My Change Requests</span>
