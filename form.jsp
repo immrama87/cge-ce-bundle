@@ -18,4 +18,48 @@
         </div>
       </section>
     </div>
+		<script>
+	        console.log('script');
+            // Initialize Bootstrappy field overrides.
+            bundle.config.fields = {
+              text: function(field, triggerFn) {
+                $(field.wrapper()).addClass('form-group');
+                $(field.wrapper()).find('label').addClass('control-label');
+                $(field.element()).addClass('form-control');
+                $(field.element()).on('change', triggerFn);
+              },
+              dropdown: function(field, triggerFn) {
+                $(field.wrapper()).addClass('form-group');
+                $(field.wrapper()).find('label').addClass('control-label');
+                $(field.element()).addClass('form-control');
+                $(field.element()).on('change', triggerFn);
+              },
+              checkbox: function(field, triggerFn) {
+                $(field.wrapper()).removeClass('checkbox');
+                $(field.wrapper()).find('label').first().addClass('control-label');
+                $(field.wrapper()).find('label').first().removeClass('field-label');
+                $(field.wrapper()).children().not(':first-child').addClass('checkbox');
+                $(field.wrapper()).children().not(':first-child').attr('style', 'margin-left:20px;');
+             },
+              radio: function(field, triggerFn) {
+                $(field.wrapper()).removeClass('radio');
+                $(field.wrapper()).find('label').first().addClass('control-label');
+                $(field.wrapper()).find('label').first().removeClass('field-label');
+                $(field.wrapper()).children().not(':first-child').addClass('radio');
+                $(field.wrapper()).children().not(':first-child').attr('style', 'margin-left:20px;');
+              }
+            };
+            bundle.config.ready = function() {
+              $('[data-element-type="button"]').addClass('btn btn-default');
+			  console.log('ready');
+			  var searchForm = $('#navbar-collapse-1 > div.navbar-form > form > div > input.form-control.predictiveText.x');
+			  var searchFormLabelText = searchForm.attr('placeholder');
+			  searchForm.wrap('<label class="field-label control-label white">'+searchFormLabelText+'</label>');
+			  $('head').append('<title>'+$('.header-label')[0].innerText+' | CGI Unify360 </title>');
+			  $('html').attr('lang','en');
+			  $('img[alt="logo"]').attr('alt','CGI Unify Three Sixty');
+			  $('span.fa.fa-home').after('<span class="sr-only">Home</span>');
+			  $('span.fa.fa-bell').after('<span class="sr-only">Alerts</span>');
+            };
+          </script>
 </bundle:layout>
