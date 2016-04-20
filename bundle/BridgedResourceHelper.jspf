@@ -147,6 +147,8 @@
                 url.append(":").append(httpRequest.getServerPort());
             }
             url.append(kappLocation).append("/").append(formSlug).append("/bridgedResources/").append(name);
+			((com.kineticdata.core.web.bundles.Bundle)request.getAttribute("bundle"))
+                .getLogger().info("[BRIDGED RESOURCE HELPER] "+url.toString());
             // Append parameters
             if (parameters.size() > 0) {
                 List<NameValuePair> urlParameters = new ArrayList<>();       
