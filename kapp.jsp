@@ -13,7 +13,7 @@
 		<c:set var="record" value="${Resources.retrieve('Customer%20by%20full%20name', params)}"/>
 	</c:catch>
 	<c:if test="catchException != null">
-		<c:set var="customerRecordID" value="Exception caught" scope="session"/>
+		<c:set var="customerRecordID" value="Exception caught: ${catchException.message}" scope="session"/>
 	</c:if>
 	<c:if test="${record != null && record.get('customerID') != null}">
 		<c:set var="customerRecordID" value="${record.get('customerID')}" scope="session"/>
