@@ -123,12 +123,25 @@
                   var h3 = $('> h3', templates[i]);
                   if(img !== undefined && h3 !== undefined) {
                       img.attr('alt',h3[0].innerHTML);
-                      debugger;
                   }
               }
               // S508 Add screen reader hints to icons
 			  $('span.fa.fa-home').after('<span class="sr-only">Home</span>');
 			  $('span.fa.fa-bell').after('<span class="sr-only">Alerts</span>');
+              // UI Set heights of all template icons to same height and text to no wrap with ellipsis
+              var templates = $('body > div.view-port > div.col-xs-12.col-md-10.col-sm-9.main-content > section > div > section.col-md-6.templates > div > div > div > a');
+              for(i=0; i<templates.length; i++) {
+                  var img = $('> div > img', templates[i]);
+                  var h3 = $('> h3', templates[i]);
+                  if(img !== undefined && h3 !== undefined) {
+                      img.attr('height','117');
+                      h3.attr('title',h3[0].innerHTML);
+                      h3.css('text-overflow','ellipsis');
+                      h3.css('white-space','nowrap');
+                      h3.css('overflow','hidden');
+                  }
+              }
+              
 			  console.log('^^ cgi-ce-bundle/layouts/layout.jsp document ready ^^');
             });
 			console.log('^^ cgi-ce-bundle/layouts/layout.jsp ^^');
