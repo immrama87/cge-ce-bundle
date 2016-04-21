@@ -129,7 +129,7 @@
 			  $('span.fa.fa-home').after('<span class="sr-only">Home</span>');
 			  $('span.fa.fa-bell').after('<span class="sr-only">Alerts</span>');
               // UI Set heights of all template icons to same height and text to no wrap with ellipsis
-              var templates = $('body > div.view-port > div.col-xs-12.col-md-10.col-sm-9.main-content > section > div > section.col-md-6.templates > div > div > div > a');
+              templates = $('body > div.view-port > div.col-xs-12.col-md-10.col-sm-9.main-content > section > div > section.col-md-6.templates > div > div > div > a');
               for(i=0; i<templates.length; i++) {
                   var img = $('> div > img', templates[i]);
                   var h3 = $('> h3', templates[i]);
@@ -141,7 +141,9 @@
                       h3.css('overflow','hidden');
                   }
               }
-              
+              // UI fix overflow of scrolled template icons
+              templates = $('body > div.view-port > div.col-xs-12.col-md-10.col-sm-9.main-content > section > div > section.col-md-6.templates');
+              templates.css('overflow','hidden');
 			  console.log('^^ cgi-ce-bundle/layouts/layout.jsp document ready ^^');
             });
 			console.log('^^ cgi-ce-bundle/layouts/layout.jsp ^^');
