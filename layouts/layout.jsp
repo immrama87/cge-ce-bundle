@@ -95,5 +95,22 @@
 			</div>
             <c:import url="${bundle.path}/partials/footer.jsp" charEncoding="UTF-8"/>
         </div>
+		<script>
+			console.log('vv cgi-ce-bundle/layouts/layout.jsp vv');
+			bundle.config.ready = function() {
+			  console.log('vv cgi-ce-bundle/layouts/layout.jsp bundle.config.ready vv');
+              $('[data-element-type="button"]').addClass('btn btn-default');
+			  var searchForm = $('#navbar-collapse-1 > div.navbar-form > form > div > input.form-control.predictiveText.x');
+			  var searchFormLabelText = searchForm.attr('placeholder');
+			  searchForm.wrap('<label class="field-label control-label white">'+searchFormLabelText+'</label>');
+			  $('head').append('<title>'+$('.header-label')[0].innerText+' | CGI Unify360 </title>');
+			  $('html').attr('lang','en');
+			  $('img[alt="logo"]').attr('alt','CGI Unify Three Sixty');
+			  $('span.fa.fa-home').after('<span class="sr-only">Home</span>');
+			  $('span.fa.fa-bell').after('<span class="sr-only">Alerts</span>');
+			  console.log('^^ cgi-ce-bundle/layouts/layout.jsp bundle.config.ready ^^');
+            };
+			console.log('^^ cgi-ce-bundle/layouts/layout.jsp ^^');
+		</script>
     </body>
 </html>

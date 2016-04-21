@@ -19,7 +19,7 @@
       </section>
     </div>
 		<script>
-	        console.log('script');
+	        console.log('vv cgi-ce-bundle/form.jsp vv');
             // Initialize Bootstrappy field overrides.
             bundle.config.fields = {
               text: function(field, triggerFn) {
@@ -50,8 +50,8 @@
               }
             };
             bundle.config.ready = function() {
+			  console.log('vv cgi-ce-bundle/form.jsp bundle.config.ready vv');
               $('[data-element-type="button"]').addClass('btn btn-default');
-			  console.log('ready');
 			  var searchForm = $('#navbar-collapse-1 > div.navbar-form > form > div > input.form-control.predictiveText.x');
 			  var searchFormLabelText = searchForm.attr('placeholder');
 			  searchForm.wrap('<label class="field-label control-label white">'+searchFormLabelText+'</label>');
@@ -60,6 +60,8 @@
 			  $('img[alt="logo"]').attr('alt','CGI Unify Three Sixty');
 			  $('span.fa.fa-home').after('<span class="sr-only">Home</span>');
 			  $('span.fa.fa-bell').after('<span class="sr-only">Alerts</span>');
+			  console.log('^^ cgi-ce-bundle/form.jsp bundle.config.ready ^^');
             };
+			console.log('^^ cgi-ce-bundle/form.jsp ^^');
           </script>
 </bundle:layout>
