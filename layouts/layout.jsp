@@ -97,19 +97,40 @@
         </div>
 		<script>
 			console.log('vv cgi-ce-bundle/layouts/layout.jsp vv');
-			bundle.config.ready = function() {
-			  console.log('vv cgi-ce-bundle/layouts/layout.jsp bundle.config.ready vv');
-              $('[data-element-type="button"]').addClass('btn btn-default');
+			$(function() {
+			  console.log('vv cgi-ce-bundle/layouts/layout.jsp document ready vv');
+              // S508 Label the search form
 			  var searchForm = $('#navbar-collapse-1 > div.navbar-form > form > div > input.form-control.predictiveText.x');
 			  var searchFormLabelText = searchForm.attr('placeholder');
 			  searchForm.wrap('<label class="field-label control-label white">'+searchFormLabelText+'</label>');
-			  $('head').append('<title>'+$('.header-label')[0].innerText+' | CGI Unify360 </title>');
+              // S508 Add a title if missing
+			  var title = $('title');
+			  if(title === undefined) {
+				var headerLabel = $('.header-label');
+				if(headerLabel !== undefined) {
+                  var titleText = headerLabel[0].innerHTML;
+				  titleText = $('head').append('<title>CGI Unify360 - '+titleText+'</title>');
+			    }
+			  }
+              // S508 Set the document language
 			  $('html').attr('lang','en');
+              // S508 Add alt tag to logo
 			  $('img[alt="logo"]').attr('alt','CGI Unify Three Sixty');
+              // S508 Add alt tags to template icons
+              var templates = $('body > div.view-port > div.col-xs-12.col-md-10.col-sm-9.main-content > section > div > section.col-md-6.templates > div > div > div > a');
+              for(i=0; i<templates.length; i++) {
+                  var img = $('> div > img', templates[i]);
+                  var h3 = $('> h3', templates[i]);
+                  if(img !== undefined && h3 !== undefined) {
+                      img.attr('alt',h3[0].innerHTML);
+                      debugger;
+                  }
+              }
+              // S508 Add screen reader hints to icons
 			  $('span.fa.fa-home').after('<span class="sr-only">Home</span>');
 			  $('span.fa.fa-bell').after('<span class="sr-only">Alerts</span>');
-			  console.log('^^ cgi-ce-bundle/layouts/layout.jsp bundle.config.ready ^^');
-            };
+			  console.log('^^ cgi-ce-bundle/layouts/layout.jsp document ready ^^');
+            });
 			console.log('^^ cgi-ce-bundle/layouts/layout.jsp ^^');
 		</script>
     </body>
